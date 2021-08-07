@@ -36,6 +36,7 @@
 @media only screen and (max-width:576px){
     
     .login-form{
+        padding-top: 30%;
         width:100%;
         border-radius: 0px;
         
@@ -43,7 +44,13 @@
     .login-form:hover{
         box-shadow: 8px 8px 50px  rgba(255, 255, 255,0);
     }
-    
+    label{
+        display: none;
+    }
+    .login-input{
+        margin-left: -2rem;
+        margin-right: auto;
+    }
 }
 
 .col-sm-10{
@@ -171,12 +178,12 @@ background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%
 }
 @media only screen and (max-width:792px) {
     .login-form:hover .top-circle{
-        width:1000px;
+        width:800px;
         height:100%;
     }
     
     .login-form:hover .bottom-circle{
-        width:1000px;
+        width:800px;
         height:100%;
     }
 }
