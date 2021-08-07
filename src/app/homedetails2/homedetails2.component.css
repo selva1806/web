@@ -1,0 +1,79 @@
+.carrd{
+    width:700px;
+position: relative;
+padding:20px;
+margin-left: auto;
+margin-right: auto;
+background-color: white;
+border-radius: 30px;
+margin-top: 30px;
+transition: 1s;
+overflow: hidden;
+
+}
+.carrd:hover{
+
+    box-shadow: 8px 8px 50px  rgb(109, 109, 109);
+
+}
+
+.top-circle{
+    width:250px;
+    height:250px;
+    border-radius: 120px;
+    position: absolute;
+    transform: translate(-150px,-150px) rotateY(180deg) ;
+
+    background-color: rgba(248, 94, 222, 0.8);
+    transition: .5s;
+}
+
+.carrd:hover .top-circle{
+    transform: translate(-50px,-50px) ;
+}
+
+.bottom-circle{
+    width:250px;
+    height:250px;
+    border-radius: 120px;
+    position: absolute;
+    transform: translate(550px,150px) rotateY(180deg) ;
+
+    background-color: rgba(0, 225, 255, 0.8);
+    transition: .5s;
+}
+.carrd:hover .bottom-circle{
+    transform: translate(50px,50px) ;
+}
+
+
+.marr{
+    margin-top:100px;
+}
+.carrd-head{
+position: relative;
+z-index: 1;
+    padding-left:25px;
+    padding-top: 50px;
+    
+}
+.carrd-p{
+
+    position: relative;
+z-index: 1;
+    padding-left:25px;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.pfont{
+    color: rgb(26, 20, 20);
+}
+
+
+@media screen and (max-width: 992px){
+   .carrd{
+       width:340px;
+       height:610px;
+   }
+    } 

@@ -1,0 +1,73 @@
+.world-image{
+    background-image: url(src/assets/img/prod.png);
+    width: 500px;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    margin-left: auto;
+    margin-top: 5%;
+    animation:updown 3s infinite;
+
+}
+.rand1{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: translate(-200px,-80px);
+}
+.rand3{
+    width: 300px;
+    height: 300px;
+    transform: translate(400px,-100px);
+}
+
+
+  
+  @keyframes rotat {
+      0%{
+          transform: rotate(0deg) ;
+      }
+      100%{
+        transform: rotate(360deg) ;
+    }
+  }
+  @keyframes updown {
+    0%{
+        transform: translateY(0px) ;
+    }
+    50%{
+        transform: translateY(20px) ;
+    }
+    100%{
+      transform: translateY(0px) ;
+  }
+}
+.ptag{
+    font-size:20px;
+    position: relative;
+    z-index: 1;
+    animation:updown 6s infinite;
+}
+.alig{
+    padding-top: 110px;
+}
+.dot{
+    background: url(https://www.visaka.co/assets/website/img/dot.png);
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+@media screen and (max-width: 992px){
+.world-image,.dot{
+    width:0px;
+    height:0px;
+}
+.rand3{
+    transform: translate(200px,-100px);
+
+}
+}

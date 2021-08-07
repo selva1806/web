@@ -1,0 +1,59 @@
+
+@font-face {
+    font-family: headfont;
+    src: url(/src/assets/font/headfont.ttf);
+  }
+*{
+    background-color: rgb(247, 247, 247);
+}
+
+.logo{
+    display: flex;
+height:400px;
+}
+
+.logo-h{
+    font-size: 30px;
+    margin-left: 20%;
+    padding-top: 10%;
+    background-color: initial;
+    font-family: headfont;
+    font-style:italic;
+    font-weight: 800;
+
+    background: rgb(0,121,255);
+    background: linear-gradient(153deg, rgba(0,121,255,1) 1%, rgba(245,9,236,1) 94%);    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.f-row-1{
+    background-color: initial;
+    padding-top: 10%;
+    padding-left: 20%;
+
+}
+.f-row-1 li{
+    list-style-type: none;
+    margin-top: 20px;
+    background-color: initial;
+    font-family: headfont;
+    font-style:italic;
+    font-weight: 800;
+
+    background: rgb(0,121,255);
+    background: linear-gradient(153deg, rgba(0,121,255,1) 1%, rgba(245,9,236,1) 94%);    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+@media screen  and (max-width:768px) {
+    
+.logo{
+    display: block;
+    height:800px;
+}
+
+}

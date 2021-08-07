@@ -1,0 +1,182 @@
+@font-face {
+    font-family: titlefont;
+    src: url(/src/assets/font/titlefont.ttf);
+}
+.formspace{
+    width:100%;
+    background-color: rgb(255, 254, 254);
+
+    padding-top:50px;
+  }
+  
+.form-control{
+    height:65px;
+    padding-left: 10px;
+    font-size: 15px;
+    background-color: rgb(235, 235, 235);
+   
+   
+  }
+  .ls{
+    margin-left: auto;
+    margin-right: auto;
+    width:500px;
+  }
+  .form-control:focus{
+    border:2px solid rgb(235, 235, 235);
+   height:65px;
+   padding-left: 10px;
+   font-size: 15px;
+   background-color: rgb(235, 235, 235); 
+   outline: none;
+  }
+  .form-control.add{
+      height:130px;
+  
+  }
+  .add:focus{
+    height:130px;
+  }
+  .emailpng{
+    width: 50%;
+    height: 50%;
+  }
+
+  .fl{
+    display: flex;
+    background-color: white;
+  }
+  .contact{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .contact h1{
+    position: relative;
+    z-index: 1;
+    font-family: titlefont;
+    font-weight: 200;
+    font-size: 50px;
+    color: rgb(44, 44, 44);
+  }
+  .bttn{
+    background-color: white;
+    width:160px;
+    height:70px;
+    overflow: hidden;
+    border:2px solid ;
+    border-image: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+    border-image-slice: 1;
+
+    transition:.5s;
+    outline: none;
+    
+}
+.bttn:hover{
+    border:2px solid rgb(255, 252, 252);
+
+}
+.bttn-txt{
+ 
+        background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      
+    position: absolute;
+font-size: 25px;
+font-weight: 600;
+transform: translate(-25px,-230px);
+font-style: italic;
+}
+.bttn:hover .bttn-txt{
+    background: -webkit-linear-gradient(#eee, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bttn-alig{
+    margin-top: 50px;
+}
+.bttn-left{
+    position: relative;
+    border: none;
+    width:130px;
+    height:120px;
+    background: rgb(245,9,236);
+    background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);  
+transform: translate(-200px,0px);
+    transition: .5s;
+}
+.bttn:hover .bttn-left{
+    transform: translate(-55px,-10px);
+
+
+}
+.bttn-right{
+    position: relative;
+    border: none;
+
+    width:130px;
+    height:120px;
+    transform: translate(160px,-150px);
+    background: rgb(245,9,236);
+background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+    transition: .5s;
+
+}
+.bttn:hover .bttn-right{
+    transform: translate(75px,-150px);
+
+
+}
+.bttn-alig{
+    margin-left: 30%;
+}
+.rand4{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  transform: translate(-150px,-100px);
+}
+
+.rand5{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  transform: translate(800px,-300px);
+
+
+  }
+
+@media only screen and (max-width: 767px) {
+.form-control{
+
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+/* for mobile */
+
+@media only screen and (max-width: 448px) {
+    .form-control{
+        width: 300px;
+      margin-left: -60px;
+      margin-right: 10px;
+    }
+    .rand5{
+      display: none;
+    }
+}
+@media only screen  and (max-width:988px) {
+  .fl{
+
+    display: block;
+  }
+  .emailpng{
+    width: 100%;
+    
+  }
+}

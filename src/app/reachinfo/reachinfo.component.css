@@ -1,0 +1,17 @@
+.mar{
+    margin-top: 20%;
+}
+.psp{
+    padding-left: 20%;
+  font-size: 25px;
+  word-wrap: break-word;
+  color: white;
+  
+}
+h1{
+    color: white;
+}
+.container-fluid{
+    background-color: rgb(45, 74, 241);
+    padding-bottom: 150px;
+}

@@ -1,0 +1,167 @@
+.height{
+    height: 770px;
+}
+.rel{
+    position: relative;
+}
+
+@keyframes popup {
+    0%{
+        opacity:0;
+        transform: translateY(150px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0px);
+    }
+    
+}
+.carocard{
+    display:grid;
+    justify-content: center;
+    top: 20%;
+    left: 10%;
+    width:80%;
+    height:inherit;
+    position:absolute;
+    opacity: 0;
+    animation: popup 1s infinite;
+    animation-duration: 8s;
+}
+.jump{
+    opacity: 1;
+    animation: popup1 2s infinite;
+    animation-duration: 2s;
+}
+.carocard .car-title{
+    font-size: 50px;
+    font-weight: 600;
+    font-style: italic;
+    color:white;
+    justify-content: center;
+    
+}
+.p-card{
+    width:300px;
+    height: 320px;
+    background-color: rgb(247, 247, 247);
+    margin: 20px;
+    justify-content: center;
+    border-radius: 10px;
+    border:1px solid rgb(141, 141, 141);
+    overflow: hidden;
+transition: .5s;
+}
+.p-card img{
+    width:300px;
+    height: 250px;
+    position: relative;
+    border-bottom: 1px solid blue;
+transition: .5s;
+}
+.p-card:hover{
+    box-shadow: 8px 8px 30px rgba(75, 75, 75,0.5);
+}
+
+.p-container{
+    margin-top: 100px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding:10px;
+}
+
+.bttn{
+    background-color: white;
+    width:90px;
+    height:40px;
+    overflow: hidden;
+    border:2px solid ;
+    border-image: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+    border-image-slice: 1;
+     margin-top: 5%;
+     margin-left: 60%;
+    transition:.5s;
+    outline: none;
+    
+}
+.bttn:hover{
+    border:2px solid rgb(255, 252, 252);
+
+}
+.bttn-txt{
+ 
+        background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      
+    position: absolute;
+font-size: 20px;
+font-weight: 600;
+transform: translate(-20px,-240px);
+font-style: italic;
+}
+.bttn:hover .bttn-txt{
+    background: -webkit-linear-gradient(#eee, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bttn-alig{
+    margin-top: 50px;
+}
+.bttn-left{
+    position: relative;
+    border: none;
+    width:130px;
+    height:120px;
+    background: rgb(245,9,236);
+    background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);  
+transform: translate(-200px,0px);
+    transition: .5s;
+}
+.bttn:hover .bttn-left{
+    transform: translate(-100px,-10px);
+
+
+}
+.bttn-right{
+    position: relative;
+    border: none;
+
+    width:130px;
+    height:120px;
+    transform: translate(160px,-150px);
+    background: rgb(245,9,236);
+background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+    transition: .5s;
+
+}
+.bttn:hover .bttn-right{
+    transform: translate(25px,-150px);
+
+
+}
+.bttn-alig{
+    margin-left: 30%;
+}
+.hovr-butt{
+    position: absolute;
+    margin-top:-150px;
+    margin-left: 100px;
+    background-color: rgba(37, 37, 37, 0.725);
+    border: 1px solid white;
+    color : white;
+    width:100px;
+    height: 40px;
+opacity: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    transition: .5s;
+}
+.p-card:hover .hovr-butt{
+    transition: 1s;
+
+
+opacity: 1;
+}

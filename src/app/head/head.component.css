@@ -1,0 +1,66 @@
+@font-face {
+    font-family: headfont;
+    src: url(/src/assets/font/headfont.ttf);
+  }
+
+  @keyframes fade-in {
+      from{
+          transform:scaleY(0);
+      }
+      to{
+        transform:scaleY(1);
+      }
+  }
+.centr{
+    text-align: center;
+}
+  .navbar{
+      padding-top:20px;
+      padding-bottom: 20px;
+  }
+  .grad {
+   
+    background: rgb(0,121,255);
+    background: linear-gradient(153deg, rgba(0,121,255,1) 1%, rgba(245,9,236,1) 94%);    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.height{
+    top:0;
+    position:fixed;
+    z-index: 5;
+    width:100%;
+}
+.space{
+    margin-left: 30px;
+}
+.marr{
+margin-right:60px;
+}
+.dropdown-menu.show{
+animation:fade-in .5s ease-out;
+}
+.fontt{
+    font-size: 20px;
+    font-family: headfont;
+    font-style:italic;
+    font-weight: 800;
+}
+.hovr{
+    
+    font-size: 20px;
+    transform:scale(1,1);
+transition:transform .5s;
+}
+.hovr:hover{
+transform: scale(1.2,1.2);
+}
+.bcolor{
+    background-color:rgba(255, 255, 255, 0.945);
+}
+.dropdown-toggle{
+    color: rgb(200, 255, 0);
+}
