@@ -10,7 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
 {path:'',component : HomeComponent},
-{path:'web/about',component : AboutComponent},
+{path:'https://selva1806.github.io/web/about',component : AboutComponent},
 {path:'login',component : LoginComponent},
 {path:'signup',component : SignupComponent},
 {path:'products',component : ProductsComponent}
