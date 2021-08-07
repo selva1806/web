@@ -9,8 +9,8 @@ import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-{path:'',component : HomeComponent},
-{path:'#/about',component : AboutComponent},
+{path:'home',component : HomeComponent},
+{path:'about',component : AboutComponent},
 {path:'login',component : LoginComponent},
 {path:'signup',component : SignupComponent},
 {path:'products',component : ProductsComponent}
