@@ -9,7 +9,7 @@ import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-{path:'home',component : HomeComponent},
+{path:'',component : HomeComponent},
 {path:'about',component : AboutComponent},
 {path:'login',component : LoginComponent},
 {path:'signup',component : SignupComponent},
