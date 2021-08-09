@@ -1,5 +1,5 @@
 <app-head></app-head>
-<div class="rel d-block w-100  height" style="background-image: linear-gradient(20deg, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, 0.6) 51%, rgba(0, 0, 0, 0.3) 75%), url('assets/img/pwall.jpeg'); background-size: cover; background-position: center center;"></div>
+<div class="rel d-block w-100  height" style="background-image: linear-gradient(20deg, rgb(241, 241, 241), rgba(248, 248, 248, 0.6) , rgba(255, 255, 255, 0.3) ), url('assets/img/pwall.jpg'); background-size: cover; background-position: center center;"></div>
 <div class="carocard">
     <span class="car-title">Asbestos</span>
    
@@ -15,12 +15,12 @@
   </div>
     <div class="row">
       <div class="col-md">
-      <img src={{item.imag}} alt="">
+      <img src={{item.imag}} alt="" width="460" height="345">
     </div>
     <div class="col-md">
 
           <h1>{{item.name}}</h1>
-          <p>Not so! A cover letter serves an important purpose: it presents the case for why you should be hired and distinguishes you from other candidates. Your cover letter is where you can show your passion for the position and the company, and highlight your most relevant qualifications. A well-written cover letter will supplement your resume by focusing on why you're a well-qualified candidate for the job.</p>
+          <p class="txtp">Not so! A cover letter serves an important purpose: it presents the case for why you should be hired and distinguishes you from other candidates. Your cover letter is where you can show your passion for the position and the company, and highlight your most relevant qualifications. A well-written cover letter will supplement your resume by focusing on why you're a well-qualified candidate for the job.</p>
        <div class="row ">
         <div class="col">
 
@@ -40,10 +40,11 @@
         </div>
 
         </div>
+        <p class="ful-rate">${{item.cost}}</p>
   </div>
 
   <div class="row">
-  
+  <p class="rate">${{item.cost}}</p>
     <button class="bttn">
       <div class="bttn-left"></div>
     <div class="bttn-right"></div>

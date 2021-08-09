@@ -12,14 +12,14 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
   }
   items = [
-{ name:'item1' ,imag:'assets/img/pr1.jpg',id:'pr1'},
-{ name:'item2' ,imag:'assets/img/pr2.jpeg',id:'pr2'},
-{ name:'item3' ,imag:'assets/img/pr3.jpg',id:'pr3'},
-{ name:'item4' ,imag:'assets/img/pr4.jpeg',id:'pr4'},
-{ name:'item5' ,imag:'assets/img/pr5.jpg',id:'pr5'},
-{ name:'item6' ,imag:'assets/img/pr6.jpeg',id:'pr6'},
-{ name:'item7' ,imag:'assets/img/pr7.jpg',id:'pr7'},
-{ name:'item8' ,imag:'assets/img/pr8.jpeg',id:'pr8'}
+{ name:'item1' ,imag:'assets/img/pr1.jpg',id:'pr1',cost : '18'},
+{ name:'item2' ,imag:'assets/img/pr2.jpeg',id:'pr2',cost : '12'},
+{ name:'item3' ,imag:'assets/img/pr3.jpg',id:'pr3',cost : '17'},
+{ name:'item4' ,imag:'assets/img/pr4.jpg',id:'pr4',cost : '21'},
+{ name:'item5' ,imag:'assets/img/pr5.jpg',id:'pr5',cost : '23'},
+{ name:'item6' ,imag:'assets/img/pr6.jpg',id:'pr6',cost : '15'},
+{ name:'item7' ,imag:'assets/img/pr7.jpg',id:'pr7',cost : '25'},
+{ name:'item8' ,imag:'assets/img/pr8.jpeg',id:'pr8',cost : '24'}
 ];
 
 fullopen(evt:any)
