@@ -11,5 +11,8 @@ export class HeadComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+opencart(){
+    var v=document.getElementById("cart");
+    v?.setAttribute("style","transform:translateX(0%);");
+}
 }

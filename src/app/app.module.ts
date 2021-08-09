@@ -18,6 +18,7 @@ import { ButtnComponent } from './buttn/buttn.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductdisComponent } from './productdis/productdis.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ProductdisComponent } from './productdis/productdis.component';
     ButtnComponent,
     SignupComponent,
     ProductsComponent,
-    ProductdisComponent
+    ProductdisComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

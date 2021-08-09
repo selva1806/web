@@ -28,11 +28,14 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item"  routerLink="/login"  href="login">Login</a>
           <a class="dropdown-item"  routerLink="/signup"  href="signup">Signup</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item"  (click)="opencart()">Cart</a>
         </div>
       </div>
       </li>
     </ul>
     </div>
+
   </nav>
+  <app-cart></app-cart>
+
   
