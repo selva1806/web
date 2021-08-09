@@ -6,9 +6,41 @@
   </div>
 <app-productdis></app-productdis>
 <div class="p-container">
-<div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
+<div class="p-card" *ngFor="let item of items">
+  <img src={{item.imag}} alt="rand">
+  <button class="hovr-butt" (click)="fullopen($event)">view</button>
+  <div class="full-view" id={{item.id}}>
+    <div class="cl">
+    <span class="close" (click)="fullclose($event)" >&times;</span>
+  </div>
+    <div class="row">
+      <div class="col-md">
+      <img src={{item.imag}} alt="">
+    </div>
+    <div class="col-md">
+
+          <h1>{{item.name}}</h1>
+          <p>Not so! A cover letter serves an important purpose: it presents the case for why you should be hired and distinguishes you from other candidates. Your cover letter is where you can show your passion for the position and the company, and highlight your most relevant qualifications. A well-written cover letter will supplement your resume by focusing on why you're a well-qualified candidate for the job.</p>
+       <div class="row ">
+        <div class="col">
+
+          <button class="bttn padl">
+            <div class="bttn-left"></div>
+          <div class="bttn-right"></div>
+          <span class="bttn-txt">Add </span></button>
+        </div>
+        <div class="col">
+
+          <button class="bttn padl">
+            <div class="bttn-left"></div>
+          <div class="bttn-right"></div>
+          <span class="bttn-txt">Buy </span></button>
+</div>
+        </div>
+        </div>
+
+        </div>
+  </div>
 
   <div class="row">
   
@@ -20,124 +52,7 @@
   </div>
   
 </div>
-<div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
 
-  <div class="row">
-  
-    <button class="bttn">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
-  
-  </div>
-  
-</div><div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
-
-  <div class="row">
-  
-    <button class="bttn">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
-  
-  </div>
-  
-</div><div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
-
-  <div class="row">
-  
-    <button class="bttn">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
-  
-  </div>
-  
-</div><div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
-
-  <div class="row">
-  
-    <button class="bttn">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
-  
-  </div>
-  
-</div><div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
-
-  <div class="row">
-  
-    <button class="bttn">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
-  
-  </div>
-  
-</div><div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
-
-  <div class="row">
-  
-    <button class="bttn">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
-  
-  </div>
-  
-</div><div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
-
-  <div class="row">
-  
-    <button class="bttn">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
-  
-  </div>
-  
-</div><div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
-
-  <div class="row">
-  
-    <button class="bttn">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
-  
-  </div>
-  
-</div><div class="p-card">
-  <img src="assets/img/aimg1.jpg" alt="rand">
-  <button class="hovr-butt">view</button>
-
-  <div class="row">
-  
-    <button class="bttn">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
-  
-  </div>
-  
-</div>
 </div>
 <app-contact></app-contact>
 <app-footer></app-footer>
