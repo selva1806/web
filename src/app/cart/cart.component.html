@@ -1,14 +1,14 @@
 <div class="cart-cont" id="cart">
     <span class="close" (click)="closecart($event)" >&times;</span>
 
-<div class="cart-card" >
+<div class="cart-card" *ngFor="let citem of cartitems" >
     <span class="close in" (click)="closeitem($event)" >&times;</span>
-<img src="assets/img/aimg.jfif" alt="">
+<img src={{citem.imag}} alt="">
 <button class="bttn">
     <div class="bttn-left"></div>
   <div class="bttn-right"></div>
   <span class="bttn-txt">Buy</span></button>
- <p>$19</p>
+ <p>${{citem.price}}</p>
 </div>
 
 </div>

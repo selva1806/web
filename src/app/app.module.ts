@@ -19,6 +19,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductdisComponent } from './productdis/productdis.component';
 import { CartComponent } from './cart/cart.component';
+import { CartsService } from './carts.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { CartComponent } from './cart/cart.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CartsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartsService } from '../carts.service';
 
 @Component({
   selector: 'app-products',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _cartsService: CartsService) { }
 
   ngOnInit(): void {
+    this.cartitems = this._cartsService.getcartitems();
   }
   items = [
 { name:'item1' ,imag:'assets/img/pr1.jpg',id:'pr1',cost : '18'},
@@ -31,16 +33,16 @@ fullclose(evt:any){
 }
 cartitems=[
 
-  {imag:'chjs',price:'19'}
+  {imag:'sample',price:'19'}
   
   ];
 
   addtocart(image:any,cost:any){
 
    var ele={imag:image,price:cost}
-   this.cartitems.push(ele)
+    this._cartsService.addcartitems(ele);
 
-   console.log(this.cartitems)
+//   console.log(this.cartitems)
 
   }
 
