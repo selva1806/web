@@ -19,4 +19,16 @@ closecart(evt:any){
 
   
 }
+
+closeitem(evt:any)
+{
+  evt.target.parentElement.remove()
+}
+
+
+
+
+
+
+
 }

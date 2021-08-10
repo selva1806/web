@@ -4,8 +4,8 @@
     background-color: rgb(247, 247, 247);
     position: fixed;
     z-index: 7;
-    right:0;
     transform: translateX(110%);
+    right:0;
     transition: .5s;
 }
 .close {
@@ -21,13 +21,105 @@
     padding-left:20px;
 
   }
-
+.in{
+  float: right;
+  padding-top: 0px;
+  padding-right: 5px;
+}
   .cart-card{
 
-    width:350px;
-    height:300px;
-    background-color: rgb(214, 214, 214);
-    margin-top:50px;
-    margin-left:10px;
+    width:300px;
+    height:170px;
+    background-color: rgb(236, 236, 236);
+    margin-top:60px;
+    margin-left:30px;
     margin-right: 40px;
   }
+
+  .cart-card img{
+    width:150px;
+    height:150px;
+    margin-top: 10px;
+    margin-left: -20px;
+  }
+
+
+  .bttn{
+    background-color: white;
+    width:100px;
+    height:70px;
+    overflow: hidden;
+    border:2px solid ;
+    border-image: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+    border-image-slice: 1;
+     margin-top: -150px;
+     margin-left: 170px;
+    transition:.5s;
+    outline: none;
+    
+}
+.bttn:hover{
+    border:2px solid rgb(255, 252, 252);
+
+}
+.bttn-txt{
+ 
+        background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      
+    position: absolute;
+font-size: 25px;
+font-weight: 600;
+transform: translate(-25px,-230px);
+font-style: italic;
+}
+.bttn:hover .bttn-txt{
+    background: -webkit-linear-gradient(#eee, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bttn-alig{
+    margin-top: 50px;
+}
+.bttn-left{
+    position: relative;
+    border: none;
+    width:130px;
+    height:120px;
+    background: rgb(245,9,236);
+    background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);  
+transform: translate(-200px,0px);
+    transition: .5s;
+}
+.bttn:hover .bttn-left{
+    transform: translate(-85px,-10px);
+
+
+}
+.bttn-right{
+    position: relative;
+    border: none;
+
+    width:130px;
+    height:120px;
+    transform: translate(160px,-150px);
+    background: rgb(245,9,236);
+background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+    transition: .5s;
+
+}
+.bttn:hover .bttn-right{
+    transform: translate(45px,-150px);
+
+
+}
+.bttn-alig{
+    margin-left: 30%;
+}
+.cart-card p{
+  margin-top: -150px;
+  margin-left: 190px;
+  font-size: 30px;
+}

@@ -29,4 +29,21 @@ fullopen(evt:any)
 fullclose(evt:any){
   var v=evt.target.parentElement.parentElement.style.display="none";
 }
+cartitems=[
+
+  {imag:'chjs',price:'19'}
+  
+  ];
+
+  addtocart(image:any,cost:any){
+
+   var ele={imag:image,price:cost}
+   this.cartitems.push(ele)
+
+   console.log(this.cartitems)
+
+  }
+
+ 
+
 }
