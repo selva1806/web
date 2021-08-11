@@ -37,7 +37,6 @@ cartitems:any=[];
 
    var ele={imag:image,price:cost}
     this._cartsService.addcartitems(ele);
-
 //   console.log(this.cartitems)
 
   }
