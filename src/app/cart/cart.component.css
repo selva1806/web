@@ -5,6 +5,7 @@
     position: fixed;
     z-index: 7;
     transform: translateX(110%);
+    overflow: scroll;
     right:0;
     transition: .5s;
 }
@@ -39,8 +40,9 @@
   .cart-card img{
     width:150px;
     height:150px;
-    margin-top: 10px;
-    margin-left: -20px;
+    position: absolute;
+    margin-top: -18%;
+    
   }
 
 
@@ -52,7 +54,7 @@
     border:2px solid ;
     border-image: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
     border-image-slice: 1;
-     margin-top: -150px;
+     margin-top: -50px;
      margin-left: 170px;
     transition:.5s;
     outline: none;

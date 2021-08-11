@@ -31,11 +31,7 @@ fullopen(evt:any)
 fullclose(evt:any){
   var v=evt.target.parentElement.parentElement.style.display="none";
 }
-cartitems=[
-
-  {imag:'sample',price:'19'}
-  
-  ];
+cartitems:any=[];
 
   addtocart(image:any,cost:any){
 
