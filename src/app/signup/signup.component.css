@@ -1,5 +1,4 @@
 .login-container{
-    margin: 90px;
     display: flex;
 justify-content: center;
 }
@@ -13,7 +12,7 @@ justify-content: center;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0);
     overflow: hidden;
-    border:3px solid white;
+    border:2px solid white;
 margin-top: 90px;
     box-shadow: 8px 8px 50px  rgb(109, 109, 109);
 
@@ -57,16 +56,17 @@ input,input:focus{
     }
     .login-form{
        top:0;
-background: url(/assets/img/signupmob.svg); 
-      box-shadow: none;
+       background: url(/assets/img/signupmob.svg); 
+
+       background-color:rgba(255, 255, 255) ;
       margin-top: 25%;
-      border-radius: 20px;
-        padding-top: 20%;
+      border-radius: 0px;
+        padding-top: 10%;
+        width: 300px;
     }
     .login-container{
-height: 900px;
-width: 100%;
-margin-left: 0px;
+height: 600px;
+width: auto;
 background: linear-gradient(356deg, rgba(255,0,245,1) 0%, rgba(0,201,220,1) 57%);
 
 
@@ -78,16 +78,15 @@ background: linear-gradient(356deg, rgba(255,0,245,1) 0%, rgba(0,201,220,1) 57%)
     .login-input,.login-input:focus{
         margin-left: 1rem;
         font-size: 20px;
-      color: white;
        border-top: none;
        border-left: none;
        border-right: none;
        border-radius: -20px;
-       border-bottom-color:white ;
+       border-bottom-color:rgb(0, 0, 0) ;
        background: inherit;
     }
     .login-input::placeholder{
-        color: white;
+        color: rgb(0, 0, 0);
     }
     input{
         width:600px;
