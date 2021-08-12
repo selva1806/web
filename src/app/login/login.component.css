@@ -1,8 +1,7 @@
 .login-container{
-    margin-top: 90px;
     justify-content: center;
-    background: url(/assets/img/loginmob.png); 
-
+    background: linear-gradient(356deg, rgba(255,0,245,1) 0%, rgba(0,201,220,1) 57%);
+    padding:150px 10px;
     display: flex;
 }
 .login-form{
@@ -24,6 +23,7 @@
     z-index: 2;
     position: relative;
     text-align: center;
+    color: white;
 }
 .fpass{
     text-decoration: none;
@@ -63,14 +63,14 @@ margin-right: auto;
 position: relative;
 }
 
-@media only screen and (max-width:576px){
+@media only screen and (max-width:562px){
     
     .login-form{
         background: url(/assets/img/loginmob.png); 
         box-shadow: none;
         padding-top: 30%;
         width:100%;
-        border-radius: 0px;
+        border-radius: 20px;
         
     }
     .login-form:hover{
@@ -82,10 +82,15 @@ position: relative;
     .login-input,.login-input:focus{
         margin-left: -2rem;
         margin-right: auto;
+        color:white;
         border-top: none;
         border-left: none;
         border-right: none;
+        border-bottom-color:white ;
         background-color: inherit;
         font-size: 15px;
+    }
+    .login-input::placeholder{
+        color: white;
     }
 }
