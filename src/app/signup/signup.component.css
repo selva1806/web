@@ -82,7 +82,7 @@ input,input:focus{
 
 height: auto;
 width: auto;
-background: linear-gradient(356deg, rgba(255,0,245,1) 0%, rgba(0,201,220,1) 57%);
+background: linear-gradient(355deg, rgba(255,0,0,1) 6%, rgba(225,50,50,1) 33%, rgba(47,0,220,1) 65%, rgba(0,201,220,1) 94%);
 
 
     }
