@@ -1,7 +1,7 @@
 <div class="cart-cont" id="cart">
     <span class="close" (click)="closecart($event)" >&times;</span>
 
-<div class="cart-card" *ngFor="let citem of cartitems" >
+<div  *ngFor="let citem of cartitems" class="cart-card" >
     <span class="close in" (click)="closeitem($event)" >&times;</span>
 <img src={{citem.imag}} alt="">
 <button class="bttn">
