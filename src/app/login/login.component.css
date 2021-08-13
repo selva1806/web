@@ -3,6 +3,8 @@
     background: linear-gradient(356deg, rgba(255,0,245,1) 0%, rgba(0,201,220,1) 57%);
     padding:150px 10px;
     display: flex;
+    position: relative;
+    overflow: hidden;
 }
 .login-form{
     height:500px;
@@ -23,7 +25,6 @@
     z-index: 2;
     position: relative;
     text-align: center;
-    color: white;
 }
 .fpass{
     text-decoration: none;
@@ -62,15 +63,38 @@ margin-left: auto;
 margin-right: auto;
 position: relative;
 }
-
+.top-square{
+    width:300px;
+    height:300px;
+    background-color: rgba(255, 255, 255, 0.244);
+    transform: translate(-210%,-60%) rotateZ(50deg) ;
+    position: absolute;
+}
+.bottom-square
+{
+    width:300px;
+    height:300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(210%,60%) rotateZ(50deg) ;
+    position: absolute;
+}
+.mob-log{
+    display: none;
+}
 @media only screen and (max-width:562px){
-    
+    .mob-log{
+        width:300px;
+        height:300px;
+        display:flex;
+        margin-top: 0px;
+    }
     .login-form{
-        background: url(/assets/img/loginmob.png); 
+        margin-top:0px;
+        background-color: white;
         box-shadow: none;
-        padding-top: 30%;
         width:100%;
         border-radius: 20px;
+        height: auto;
         
     }
     .login-form:hover{
@@ -82,15 +106,11 @@ position: relative;
     .login-input,.login-input:focus{
         margin-left: -2rem;
         margin-right: auto;
-        color:white;
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom-color:white ;
         background-color: inherit;
         font-size: 15px;
     }
-    .login-input::placeholder{
-        color: white;
-    }
+    
 }
