@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-
 import { AppRoutingModule , RoutingComponent} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -49,8 +47,7 @@ import { BthomeComponent } from './bthome/bthome.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [  {provide: LocationStrategy, useClass: HashLocationStrategy},
-    CartsService],
+  providers: [CartsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
