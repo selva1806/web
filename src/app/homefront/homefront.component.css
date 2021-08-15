@@ -17,6 +17,19 @@
        }
       
   }
+  @keyframes rad {
+      0%{
+          transform: translateX(0%);
+
+      }
+      50%{
+        transform: translateX(5%);
+    }
+      100%{
+        transform: translateX(0%);
+    }
+      
+  }
   @keyframes colorchange {
       0%{
           background-color: rgb(247, 247, 247);
@@ -25,15 +38,26 @@
         background-color: rgb(83, 86, 255);
 
       }
-      75%{
-        background-color: rgb(83, 86, 255);
-
-      }
+  
       100%{
         background-color: rgb(247, 247, 247);
 
       }
   }
+  @keyframes colorchange-2 {
+    0%{
+      color: rgb(0, 0, 0);
+    }
+    50%{
+     color: rgb(255, 255, 255);
+
+    }
+
+    100%{
+      color: rgb(0, 0, 0);
+
+    }
+}
 .left-img{
     position: absolute;
 
@@ -62,6 +86,7 @@ position: relative;
   margin-top: 10%;
   width: 600px;
   height: auto;
+  animation: rad 6s infinite;
     }
 
 .head{
@@ -71,19 +96,21 @@ position: relative;
     font-size: 50px;
     margin-left: 20%;
     font-family: head;
+    animation: colorchange-2 6s infinite;
+
 }
 .home-cont{
     position: relative;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    animation: colorchange 12s infinite;
+    animation: colorchange 6s infinite;
+
 }
 
 @media only screen and (max-width:600px){
     .bimg{
         width: 350px;
         padding-right: 20px;
-        margin-left: 10%;
         margin-right: auto;
     }
     .right-img{

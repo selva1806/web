@@ -22,6 +22,7 @@ import { CartComponent } from './cart/cart.component';
 import { CartsService } from './carts.service';
 import { BthomeComponent } from './bthome/bthome.component';
 import { HomefrontComponent } from './homefront/homefront.component';
+import { CaloginComponent } from './calogin/calogin.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HomefrontComponent } from './homefront/homefront.component';
     ProductdisComponent,
     CartComponent,
     BthomeComponent,
-    HomefrontComponent
+    HomefrontComponent,
+    CaloginComponent
   ],
   imports: [
     BrowserModule,
