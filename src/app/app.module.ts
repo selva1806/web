@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule , RoutingComponent} from './app-routing.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeadComponent } from './head/head.component';
@@ -20,6 +21,7 @@ import { ProductdisComponent } from './productdis/productdis.component';
 import { CartComponent } from './cart/cart.component';
 import { CartsService } from './carts.service';
 import { BthomeComponent } from './bthome/bthome.component';
+import { HomefrontComponent } from './homefront/homefront.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +43,14 @@ import { BthomeComponent } from './bthome/bthome.component';
     ProductsComponent,
     ProductdisComponent,
     CartComponent,
-    BthomeComponent
+    BthomeComponent,
+    HomefrontComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [CartsService],
+  providers: [  {provide: LocationStrategy, useClass: HashLocationStrategy},CartsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
