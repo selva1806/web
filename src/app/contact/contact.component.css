@@ -2,6 +2,17 @@
     font-family: titlefont;
     src: url(https://selva1806.github.io/web/assets/font/titlefont.ttf);
 }
+@keyframes flot {
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(10%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
 .formspace{
     width:100%;
     background-color: rgb(255, 254, 254);
@@ -40,6 +51,7 @@
   .emailpng{
     width: 50%;
     height: 50%;
+    animation: flot 10s infinite;
   }
 
   .fl{
@@ -177,6 +189,6 @@ background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%
   }
   .emailpng{
     width: 100%;
-    
+    margin-top: -100px;
   }
 }

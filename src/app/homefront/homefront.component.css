@@ -86,6 +86,8 @@ position: relative;
   margin-top: 10%;
   width: 600px;
   height: auto;
+  padding-top:100px;
+  padding-bottom: 50px;
   animation: rad 6s infinite;
     }
 
@@ -96,14 +98,17 @@ position: relative;
     font-size: 50px;
     margin-left: 20%;
     font-family: head;
-    animation: colorchange-2 6s infinite;
+    color: white;
+    /* animation: colorchange-2 6s infinite; */
 
 }
 .home-cont{
     position: relative;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    animation: colorchange 6s infinite;
+    background-color: rgb(83, 86, 255);
+
+    /* animation: colorchange 6s infinite; */
 
 }
 

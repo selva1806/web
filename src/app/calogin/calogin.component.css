@@ -4,10 +4,21 @@
   }
 
 .ca-cont{
-    background-color: rgb(255, 255, 255);
+ 
     display: flex;
     padding:100px 10px;
     justify-content: center;
+    background-image: url(/assets/img/authbac.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+}
+.flot{
+    position: absolute;
+    width: 300px;
+    margin-top: 400px;
 }
 .login{
     width:10rem;
