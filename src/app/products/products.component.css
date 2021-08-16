@@ -1,10 +1,10 @@
 @font-face {
     font-family: paratext;
-    src: url(/assets/font/BalooChettan2-Regular.ttf);
+    src: url(https://selva1806.github.io/web/assets/font/BalooChettan2-Regular.ttf);
   }
 @font-face {
     font-family: producthead;
-    src: url(/assets/font/Comfortaa-VariableFont_wght.ttf);
+    src: url(https://selva1806.github.io/web/assets/font/Comfortaa-VariableFont_wght.ttf);
   }
 .rate{
     padding-left:30px;

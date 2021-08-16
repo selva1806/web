@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: paratext;
-    src: url(/src/assets/font/BalooChettan2-Regular.ttf);
+    src: url(https://selva1806.github.io/web/assets/font/BalooChettan2-Regular.ttf);
   }
 .world-image{
     background-image: url(src/assets/img/logo.jpg);
