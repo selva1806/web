@@ -49,8 +49,9 @@
     height:130px;
   }
   .emailpng{
-    width: 50%;
+    width: 100%;
     height: 50%;
+    margin-top:30%;
     animation: flot 10s infinite;
   }
 
@@ -185,10 +186,14 @@ background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%
 @media only screen  and (max-width:988px) {
   .fl{
 
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+
   }
   .emailpng{
-    width: 100%;
-    margin-top: -100px;
+   float: right;
+    width: 80%;
+    margin-top: 100px;
+    padding-bottom: 40px;
   }
 }
