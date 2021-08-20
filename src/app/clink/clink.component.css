@@ -1,0 +1,33 @@
+@font-face {
+    font-family: head;
+    src: url(https://selva1806.github.io/web/assets/font/Comfortaa-VariableFont_wght.ttf);
+  }
+
+.clink-cont{
+    background-color: rgba(0, 0, 0, 0.514);
+    padding: 50px;
+    justify-content: center;
+}
+.ptag{
+    font-size: 30px;
+text-align: center;
+font-family: head;
+color: white;
+}
+.prdt{
+    text-decoration: none;
+    color:white;
+    background-color: rgb(54, 98, 243);
+    padding: 15px 50px;
+    border-top-left-radius: 25px;
+    border:none;
+    font-size: 18px;
+    outline: none;
+    transition: .5s;
+
+}
+.prdt:hover{
+    background-color: white;
+    color: rgb(54, 98, 243);
+}
+  

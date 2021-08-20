@@ -23,6 +23,7 @@ import { CartsService } from './carts.service';
 import { BthomeComponent } from './bthome/bthome.component';
 import { HomefrontComponent } from './homefront/homefront.component';
 import { CaloginComponent } from './calogin/calogin.component';
+import { ClinkComponent } from './clink/clink.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CaloginComponent } from './calogin/calogin.component';
     CartComponent,
     BthomeComponent,
     HomefrontComponent,
-    CaloginComponent
+    CaloginComponent,
+    ClinkComponent
   ],
   imports: [
     BrowserModule,
