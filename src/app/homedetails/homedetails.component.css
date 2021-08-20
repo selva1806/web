@@ -30,7 +30,7 @@
 .prdt{
     text-decoration: none;
     color:white;
-    background-color: blue;
+    background-color: rgb(54, 98, 243);
     padding: 15px 50px;
     border-top-left-radius: 25px;
     border:none;
@@ -41,7 +41,7 @@
 }
 .prdt:hover{
     background-color: white;
-    color: blue;
+    color: rgb(54, 98, 243);
 }
   
   @keyframes rotat {

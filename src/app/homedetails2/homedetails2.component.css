@@ -4,7 +4,7 @@
   }
   @font-face {
     font-family: parahead;
-    src: url(https://github.com/selva1806/web/raw/master/src/assets/font/VarelaRound-Regular.ttf);
+    src: url(/assets/font/VarelaRound-Regular.ttf);
   }
   .cont{
       margin-top: 20px;
