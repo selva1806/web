@@ -4,7 +4,7 @@
   }
   @font-face {
     font-family: parahead;
-    src: url(https://selva1806.github.io/web/assets/font/chead.ttf);
+    src: url(https://selva1806.github.io/web/assets/font/VarelaRound-Regular.ttf);
   }
   .cont{
       margin-top: 20px;
@@ -71,7 +71,7 @@ z-index: 1;
     padding-left:25px;
     padding-top: 50px;
     font-family: parahead;
-    
+    font-weight: bolder;
 }
 .carrd-p{
 
