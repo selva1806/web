@@ -4,13 +4,13 @@
   }
   @font-face {
     font-family: parahead;
-    src: url(https://selva1806.github.io/web/assets/font/SignikaNegative-SemiBold.ttf);
+    src: url(https://selva1806.github.io/web/assets/font/chead.ttf);
   }
   .cont{
       margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
-      
+      padding-bottom: 60px;
   }
 .carrd{
     width:400px;
@@ -19,15 +19,16 @@ padding:20px;
 margin-left: auto;
 margin-right: auto;
 background-color: white;
-border-radius: 20px;
+border-radius: 0px;
 margin-top: 30px;
 transition: 1s;
 overflow: hidden;
 
 }
 .carrd:hover{
-
-    box-shadow: 8px 8px 50px  rgb(109, 109, 109);
+    border-radius: 20px;
+    
+    box-shadow: 8px 8px 25px  rgb(109, 109, 109);
 
 }
 

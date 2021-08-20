@@ -151,7 +151,7 @@ font-size: 30px;
     padding-left: 20px;
     font-family: paratext;
     word-wrap: break-word;
-    font-size: 21px;
+    font-size: 16px;
 }
  
   .bttn{
@@ -245,7 +245,8 @@ background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%
 .col{display: flex;}
 .cl{
     height:40px;
-    position: relative;
+    margin-right: -30px;
+    position: sticky;
     
     overflow: hidden;
 

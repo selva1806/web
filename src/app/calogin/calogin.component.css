@@ -8,12 +8,13 @@
     display: flex;
     padding:100px 10px;
     justify-content: center;
+    
     background-image: url(https://selva1806.github.io/web/assets/img/authbac.jpg);
+
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: white;
 }
 .flot{
     position: absolute;

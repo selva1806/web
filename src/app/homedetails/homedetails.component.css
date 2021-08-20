@@ -27,8 +27,22 @@
     position: absolute;
 
 }
-
-
+.prdt{
+    text-decoration: none;
+    color:white;
+    background-color: blue;
+    padding: 15px 50px;
+    border-top-left-radius: 25px;
+    border:none;
+    font-size: 18px;
+    outline: none;
+    float: right;
+    transition: .5s;
+}
+.prdt:hover{
+    background-color: white;
+    color: blue;
+}
   
   @keyframes rotat {
       0%{
@@ -50,15 +64,20 @@
   }
 }
 .ptag{
-    font-size:20px;
+    font-size:16px;
     position: relative;
     z-index: 1;
+    color: white;
     font-family: paratext;
     animation:updown 6s infinite;
 }
 .alig{
     padding-top: 110px;
+    padding-bottom: 60px;
     
+}
+.con{
+    background-color: rgb(88, 88, 88);
 }
 .dot{
     background: url(https://www.visaka.co/assets/website/img/dot.png);
