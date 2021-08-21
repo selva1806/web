@@ -18,6 +18,8 @@
     transition: .5s ease-in;
     font-size: 17px;
     color: rgb(128, 128, 128);
+    font-style: italic;
+    font-weight: 700;
 }
 .but-card:hover{
     color: rgb(248, 113, 226);
@@ -27,12 +29,12 @@
 float: right;
 margin-right: 10px;
 margin-top: 5px;
-transform: rotateZ(180deg);
+transform: rotateZ(0deg);
 transition: .5s;
 
 }
-.but-card.collapsed .pls{
-    transform: rotateZ(0deg);
+.but-card[aria-expanded="true"] .pls{
+    transform: rotateZ(180deg);
 }
 .rand1{
     width: 300px;
