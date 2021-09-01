@@ -8,10 +8,13 @@
     position: fixed;
     bottom: 0;
     left: 0;
+    opacity: .5;
     transform: translate(10px,-10px);
     transition: .5s;
+    z-index: 8;
 }
 .stotop:hover{
+    opacity: 1;
     transform: translate(10px,-30px);
 
 }
