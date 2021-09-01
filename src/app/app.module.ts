@@ -24,6 +24,7 @@ import { BthomeComponent } from './bthome/bthome.component';
 import { HomefrontComponent } from './homefront/homefront.component';
 import { CaloginComponent } from './calogin/calogin.component';
 import { ClinkComponent } from './clink/clink.component';
+import { ScrollComponent } from './scroll/scroll.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ClinkComponent } from './clink/clink.component';
     BthomeComponent,
     HomefrontComponent,
     CaloginComponent,
-    ClinkComponent
+    ClinkComponent,
+    ScrollComponent
   ],
   imports: [
     BrowserModule,
