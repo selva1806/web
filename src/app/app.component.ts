@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FirebaseService } from './services/firebase.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mp2';
-
+ 
+  isSignedIn=false;
+  constructor(public firebaseSerivce: FirebaseService){}
+    ngOnInit(){
+  if(localStorage.getItem('user')!==null)
+  {
+    this.isSignedIn=true;
+  }
+  else{
+    this.isSignedIn=false;
+  }
+    }
+  
+   
+  
 }
