@@ -57,7 +57,7 @@ import { FirebaseService } from './services/firebase.service';
     ClinkComponent,
     ScrollComponent
   ],
-  imports: [
+  imports: [ 
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
