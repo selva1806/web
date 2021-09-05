@@ -4,6 +4,7 @@ import { AppRoutingModule , RoutingComponent} from './app-routing.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AngularFireModule } from '@angular/fire';
 import {  AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
@@ -61,7 +62,8 @@ import { FirebaseService } from './services/firebase.service';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireDatabaseModule
   ],
   providers: [  {provide: LocationStrategy, useClass: HashLocationStrategy},CartsService,FirebaseService],
   bootstrap: [AppComponent]

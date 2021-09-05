@@ -42,7 +42,11 @@ cartitems:any=[];
 //   console.log(this.cartitems)
 
   }
-
- 
+ orderform:any;
+ addtodb(itemname:string,itemcost:string)
+ { 
+   this.orderform=[{name:itemname,price:itemcost}];
+   this._cartsService.addOrdersToFirebase(this.orderform);
+ }
 
 }

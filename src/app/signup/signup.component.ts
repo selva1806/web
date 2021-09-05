@@ -12,9 +12,9 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  async onSignup(email:string,password:string)
+  async onSignup(email:string,password:string,uname:string,mobile:string)
   {
-    await this.firebaseSerivce.signup(email,password)
+    await this.firebaseSerivce.signup(email,password,uname,mobile)
     if(this.firebaseSerivce.isLoggedIn)
     {
     this.isSignedIn=true;

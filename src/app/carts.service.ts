@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartsService {
+private orderList:AngularFireList<any>;
+private userList:AngularFireList<any>;
 
-  constructor() { }
+  constructor(  private firebase: AngularFireDatabase) {
+  this.orderList=this.firebase.list('orders');
+  this.userList=this.firebase.list('users');
+   }
 public cartitems:any=[];
 
  addcartitems(item:any){
@@ -48,4 +54,16 @@ public cartitems:any=[];
    this.cartitems.splice(index,  1);
 //console.log(this.cartitems)
   }
+  getOrdersFromFirebase(){
+   return  this.orderList;
+  }
+  addOrdersToFirebase(order:any){
+  this.orderList.push(order);
+  alert("order placed");
+  }
+ addUsersTOFirebase(user:any){
+  this.userList.push(user);
+  alert("profile created");
+ }
+
 }
