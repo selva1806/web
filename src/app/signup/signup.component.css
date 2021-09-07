@@ -28,10 +28,15 @@ margin-top: 90px;
     text-decoration: none;
     float: right;
 }
-input,input:focus{
+textarea,textarea:focus,input,input:focus{
     font-size: 20px;
     background-color: rgb(230, 230, 230);
    
+}
+.back{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
 }
 .login-input,.login-input:focus{
     border:1px solid rgb(172, 172, 172);
@@ -91,6 +96,7 @@ background: linear-gradient(355deg, rgba(255,0,0,1) 6%, rgba(225,50,50,1) 33%, r
     .login-form:hover{
         box-shadow: 8px 8px 50px  rgba(255, 255, 255,0);
     }
+    
     .login-input,.login-input:focus{
         margin-left: 1rem;
         font-size: 15px;

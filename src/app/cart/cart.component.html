@@ -2,9 +2,9 @@
     <span class="close" (click)="closecart($event)" >&times;</span>
 
 <div  *ngFor="let citem of cartitems" class="cart-card" >
-    <span class="close in" (click)="closeitem($event)" >&times;</span>
+    <span class="close in" (click)="closeitem($event)" id="clo" >&times;</span>
 <img src={{citem.imag}} alt="">
-<button class="bttn">
+<button class="bttn" (click)="addtodb(citem.name,citem.price)">
     <div class="bttn-left"></div>
   <div class="bttn-right"></div>
   <span class="bttn-txt">Buy</span></button>

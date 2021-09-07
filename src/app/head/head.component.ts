@@ -34,4 +34,7 @@ logout()
     this.isLogout.emit()
     console.log("logged out")
   }
+  profile(){
+    
+  }
 }

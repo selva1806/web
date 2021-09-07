@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartsService } from '../carts.service';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +9,7 @@ import { CartsService } from '../carts.service';
 })
 export class CartComponent implements OnInit {
 cartitems:any=[];
-  constructor(private _cartsService: CartsService) { }
+  constructor(private _cartsService: CartsService,public firebaseSerivce: FirebaseService) { }
 
   ngOnInit(): void {
     this.cartitems = this._cartsService.getcartitems();
@@ -36,7 +37,33 @@ this.cartitems = this._cartsService.getcartitems();
 }
 
 
+orderform:any;
+ orderarray:any;
 
+ addtodb(itemname:string,itemcost:string)
+ { 
+   
+  this.firebaseSerivce.getUsers().subscribe(list=>{
+    this.orderarray=list.map(item=>{
+      this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+     //   console.log(item.payload.val()[0].emailadd,user?.email)
+        if(item.payload.val()[0].emailadd===user?.email)
+        {
+     console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+     this.orderform=[{name:itemname,price:itemcost,username:item.payload.val()[0].username,address:item.payload.val()[0].address,mobileno:item.payload.val()[0].mobileno,email:item.payload.val()[0].emailadd}];
+     this._cartsService.addOrdersToFirebase(this.orderform);   
+
+    }
+          
+        })
+    //  console.log(item.payload.val()[0].emailadd)
+      
+    
+      })
+      })
+  document.getElementById("clo")?.click()
+ }
+ 
 
 
 

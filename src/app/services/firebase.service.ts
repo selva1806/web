@@ -3,13 +3,20 @@ import { Injectable } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { CartsService } from '../carts.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
   isLoggedIn=false;
-  constructor(public firebaseAuth:AngularFireAuth,private cartsService: CartsService) { }
+  private orderlist:AngularFireList<any>;
+
+  constructor( private firebase: AngularFireDatabase,public firebaseAuth:AngularFireAuth,private cartsService: CartsService,private firestore: AngularFirestore) { 
+    this.orderlist=this.firebase.list('orders');
+
+  }
 
   async signin(email:string,password:string)
   {
@@ -19,7 +26,7 @@ export class FirebaseService {
       localStorage.setItem('user',JSON.stringify(res.user))
       this.firebaseAuth.onAuthStateChanged(user=>{
       console.log(this.firebaseAuth.authState +" f")
-        alert(this.firebaseAuth.authState)
+     //   alert(this.firebaseAuth.authState)
       })
       alert("logged in " )
       window.location.href="/web/";
@@ -29,7 +36,15 @@ export class FirebaseService {
       })
   }
   userp:any
-  async signup(email:string,password:string,uname:string,mobile:string)
+  temp:any
+  next:any
+  getUsers() {
+    
+   
+    this.orderlist=this.firebase.list('users');
+    return this.orderlist.snapshotChanges()
+}
+  async signup(email:string,password:string,uname:string,mobile:string,addr:string)
   { 
     await this.firebaseAuth.createUserWithEmailAndPassword(email,password)
     .then(res=>{
@@ -37,7 +52,7 @@ export class FirebaseService {
       
       localStorage.setItem('user',JSON.stringify(res.user))
       this.userp=[{
-        username:uname,mobileno:mobile,emailadd:email
+        username:uname,mobileno:mobile,emailadd:email,address:addr
       }]
       this.cartsService.addUsersTOFirebase(this.userp);
       alert("signed up")
