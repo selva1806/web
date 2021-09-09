@@ -136,7 +136,8 @@ position: relative;
 transition: 1s;
 }
 .bttn-login:hover{
-    background-color: rgb(90, 0, 173);
+    background-color: rgb(255, 255, 255);
+    color: purple;
 
 }
 .auth-img{
