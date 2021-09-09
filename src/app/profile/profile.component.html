@@ -1,0 +1,9 @@
+<div class="pro-model" id="pro">
+    <span class="close" (click)="closepro($event)" >&times;</span>
+<input  class="ipfields" placeholder="Name" #nam  type="text" id="name">
+<input  class="ipfields" placeholder="Mobile" #mob type="text" id="phone">
+<input  class="ipfields" placeholder="Email" #emails type="text" id="emailid" disabled>
+<input class="ipfields" placeholder="Address" #addr type="text" id="address">
+ <button class="profilebut" (click)="profileupdation(emails.value,nam.value,mob.value,addr.value)">Submit</button>
+
+</div>

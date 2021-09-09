@@ -7,10 +7,13 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 export class CartsService {
 private orderList:AngularFireList<any>;
 private userList:AngularFireList<any>;
+private updateList:AngularFireList<any>;
 
   constructor(  private firebase: AngularFireDatabase) {
   this.orderList=this.firebase.list('orders');
   this.userList=this.firebase.list('users');
+  this.updateList=this.firebase.list('users');
+
    }
 public cartitems:any=[];
 
@@ -60,10 +63,15 @@ public cartitems:any=[];
   addOrdersToFirebase(order:any){
   this.orderList.push(order);
   alert("order placed");
+  window.location.href="/web/"
   }
  addUsersTOFirebase(user:any){
   this.userList.push(user);
   alert("profile created");
  }
-
+updateUsers(key:string,email:string,uname:string,mobile:string,addr:string){
+ this.updateList.set(key,{0:{
+  username:uname,mobileno:mobile,emailadd:email,address:addr
+}}) ;
+}
 }

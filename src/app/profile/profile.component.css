@@ -1,0 +1,43 @@
+.pro-model{
+     display:none; 
+    position: fixed; /* Stay in place */
+    width: 100%;
+    height:100%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.623);
+    overflow: auto; /* Enable scroll if needed */
+ padding:30px;
+ padding-top: 100px;
+ justify-content: center;
+}
+.profilebut{
+    width:150px;
+    height:50px;
+    border:none;
+    background-color: rgb(214, 8, 214);
+    color: white;
+    border-radius: 30px;
+    outline: none;
+    transition: 1s;
+}
+.profilebut:hover{
+    background-color: white;
+    color:purple;
+}
+.ipfields{
+width:300px;
+height: 70px;
+border-radius: 10px;
+border:none;
+padding-left: 20px;
+background-color: rgb(247, 247, 247);
+margin-bottom: -350px;
+}
+.ipfields:focus{
+outline: none;
+}
+.close{
+    position: absolute;
+    padding:20px;
+    color: white;
+}

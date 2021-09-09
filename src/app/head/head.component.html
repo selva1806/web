@@ -28,7 +28,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" *ngIf="!isSignedIn"  routerLink="/login"  href="login">Login</a>
           <a class="dropdown-item"  routerLink="/signup" *ngIf="!isSignedIn"  href="signup">Signup</a>
-          <a class="dropdown-item" (click)="profile()" *ngIf="isSignedIn"   >Profile</a>
+          <a class="dropdown-item" (click)="openpro()" *ngIf="isSignedIn"   >Profile</a>
 
           <a class="dropdown-item" (click)="logout()" *ngIf="isSignedIn"  routerLink="/login"  href="login">Logout</a>
 
@@ -40,6 +40,7 @@
     </div>
 
   </nav>
+  <app-profile></app-profile>
   <app-cart></app-cart>
 
   

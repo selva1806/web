@@ -31,6 +31,7 @@ import { CaloginComponent } from './calogin/calogin.component';
 import { ClinkComponent } from './clink/clink.component';
 import { ScrollComponent } from './scroll/scroll.component';
 import { FirebaseService } from './services/firebase.service';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { FirebaseService } from './services/firebase.service';
     HomefrontComponent,
     CaloginComponent,
     ClinkComponent,
-    ScrollComponent
+    ScrollComponent,
+    ProfileComponent
   ],
   imports: [ 
     BrowserModule,
