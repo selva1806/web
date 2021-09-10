@@ -8,11 +8,13 @@ export class CartsService {
 private orderList:AngularFireList<any>;
 private userList:AngularFireList<any>;
 private updateList:AngularFireList<any>;
+private contactList:AngularFireList<any>;
 
   constructor(  private firebase: AngularFireDatabase) {
   this.orderList=this.firebase.list('orders');
   this.userList=this.firebase.list('users');
   this.updateList=this.firebase.list('users');
+  this.contactList=this.firebase.list('contacts');
 
    }
 public cartitems:any=[];
@@ -78,5 +80,11 @@ removeOrders(key:string)
 {
   this.orderList.remove(key)
   alert("order removed")
+}
+contactAdd(contact:any)
+{
+  this.contactList.push(contact);
+  alert("message sent successfully")
+
 }
 }

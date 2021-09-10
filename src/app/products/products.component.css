@@ -91,7 +91,7 @@ transition: .5s;
     width:300px;
     height: 250px;
     position: relative;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid rgb(141, 141, 141);
 transition: .5s;
 }
 .p-card:hover{
@@ -142,9 +142,10 @@ opacity: 1;
 .full-view h1{
     padding-top: 20px;
 padding-left: 20px;
+font-weight: 700;
 font-family: producthead;
-font-weight: 800;
-font-style: italic;
+
+text-transform: uppercase;
 font-size: 30px;
 }
 .txtp{
@@ -155,13 +156,14 @@ font-size: 30px;
 }
  
   .bttn{
-    background-color: white;
+    background-color: rgb(253, 0, 219);
+    color:white;
     width:80px;
     height:40px;
     overflow: hidden;
     border:2px solid ;
-    border-image: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
-    border-image-slice: 1;
+    border:2px solid rgb(255, 252, 252);
+
      margin-top: 15px;
      margin-left: 200px;
     transition:.5s;
@@ -170,7 +172,11 @@ font-size: 30px;
     
 }
 .bttn:hover{
-    border:2px solid rgb(255, 252, 252);
+    border-image: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+    border-image-slice: 1;
+
+    background-color: white;
+    color: rgb(253, 0, 219);
 
 }
 .bttn-txt{
@@ -235,9 +241,27 @@ background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%
     height: auto;
     max-height: 500px;
     border:2px solid rgb(172, 168, 168);
-    border-radius: 10px;
 }
+.quant{
+    width:90px;
+    margin-left: 50px;
+    border-radius: 50px;
+ border : 2px solid rgb(245, 0, 245);
+    transition: .5s;
+    padding:10px;
+}
+#quantt{
+    font-family: producthead;
 
+    text-transform: uppercase;
+    margin-left: 20px;
+    color:rgb(241, 1, 241);
+    font-weight: 900;
+}
+.quant:focus{
+    outline: none;
+    box-shadow: 0 0 10pt 2pt rgb(245, 0, 245);
+}
 .padl{
    margin-left: 10px;
   

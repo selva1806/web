@@ -21,20 +21,17 @@
 
           <h1>{{item.name}}</h1>
           <p class="txtp">Not so! A cover letter serves an important purpose: it presents the case for why you should be hired and distinguishes you from other candidates. Your cover letter is where you can show your passion for the position and the company, and highlight your most relevant qualifications. A well-written cover letter will supplement your resume by focusing on why you're a well-qualified candidate for the job.</p>
-       <div class="row ">
-        <div class="col">
+            <label for="quant" id="quantt" >Quantity:  <input type="number" #num (change)="calc(num.value,item.cost)" id="quant" class="quant" min="1" required value="1" max="10">
+            </label>
+          <div class="row ">
 
-          <button class="bttn padl" (click)="addtocart(item.imag,item.cost,item.name)">
-            <div class="bttn-left"></div>
-          <div class="bttn-right"></div>
-          <span class="bttn-txt" >Add </span></button>
+        <div class="col">
+          <button class="bttn padl" (click)="addtocart(item.imag,item.cost,item.name)">Add</button>
         </div>
         <div class="col">
 
           <button class="bttn padl" (click)="addtodb(item.name,item.cost,item.imag)">
-            <div class="bttn-left"></div>
-          <div class="bttn-right"></div>
-          <span class="bttn-txt" >Buy </span></button>
+            Buy</button>
 </div>
         </div>
         </div>
@@ -45,10 +42,7 @@
 
   <div class="row">
   <p class="rate">${{item.cost}}</p>
-    <button class="bttn" (click)="addtocart(item.imag,item.cost,item.name)">
-      <div class="bttn-left"></div>
-    <div class="bttn-right"></div>
-    <span class="bttn-txt">Add</span></button>
+    <button class="bttn" (click)="addtocart(item.imag,item.cost,item.name)">Add</button>
   
   </div>
   

@@ -2,35 +2,35 @@
 <div class="formspace" id="contact">
   <!-- <img class="rand4" src="assets/img/rand4.png" alt="rand4"> -->
 
-    <form class="contact" action="#contact" >
+    <div class="contact"  >
   <h1 style="padding-bottom: 10px;text-align: center;"class=" fadeintop">Contact Us</h1>
       <div class="form-row">
       <div class="form-group col-md-6">
-          <input type="text" class="form-control " id="user"  placeholder="Name" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
+          <input type="text" class="form-control " id="user" #user  placeholder="Name" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
           <p id="qu-usr"></p>
         </div>
           <div class="form-group col-md-6">
-            <input type="email" class="form-control " id="qu-email" aria-describedby="emailHelp" placeholder="Enter email" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
+            <input type="email" class="form-control " id="qu-email" #email aria-describedby="emailHelp" placeholder="Enter email" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
             <p id="qu-em"></p>
           </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <input type="text" class="form-control " id="mobile"  placeholder="Mobile" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
+              <input type="text" class="form-control " id="mobile" #mobile  placeholder="Mobile" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
               <p id="qu-numcheck"></p>
             </div>
             <div class="form-group col-md-6">
-              <input type="text" class="form-control " id="subject"   placeholder="Subject" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
+              <input type="text" class="form-control " id="subject" #subject  placeholder="Subject" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
               <p id="subcheck"></p>
             </div>
           </div>
             <div class="form-group">
-              <textarea class="form-control add " id="message"   placeholder="Enter your Message here" rows="3" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150"></textarea>
+              <textarea class="form-control add " id="message" #message  placeholder="Enter your Message here" rows="3" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150"></textarea>
               <p id="qu-msgcheck"></p>
             </div>
             <div class="form-group " data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150"> 
                
-                    <button class="bttn">
+                    <button class="bttn" (click)="contactform(user.value,email.value,mobile.value,subject.value,message.value)">
                       <div class="bttn-left"></div>
                     <div class="bttn-right"></div>
                       <span class="bttn-txt">Send</span></button>
@@ -39,7 +39,7 @@
               
              
 
-      </form>
+      </div>
 
     </div>
 <div>

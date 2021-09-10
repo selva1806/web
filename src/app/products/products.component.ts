@@ -70,6 +70,14 @@ cartitems:any=[];
    
  }
  
+tc=0;
+calc(num:string,cost:string)
+{
+  this.tc=0;
+  this.tc=Number(num)*Number(cost);
+  let element = <HTMLInputElement>document.getElementsByClassName("ful-rate")[0]
+  element.value = String(this.tc)
+ // alert(this.tc)
 
-
+}
 }

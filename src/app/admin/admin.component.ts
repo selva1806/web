@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartsService } from '../carts.service';
 import { FirebaseService } from '../services/firebase.service';
 
@@ -9,12 +10,19 @@ import { FirebaseService } from '../services/firebase.service';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private _cartsService: CartsService,public firebaseSerivce: FirebaseService) { }
+  constructor(private _cartsService: CartsService,public router: Router,public firebaseSerivce: FirebaseService) { }
   orderarray:any;
 displayarray:any=[];
 ele:any;
 count=0;
   ngOnInit(): void {
+    this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+      if(user?.email!=="ss@gmail.com")
+      {
+        this.router.navigate(['/login']);
+      }
+      
+    })
     this.firebaseSerivce.getOrders().subscribe(list=>{
       this.orderarray=list.map(item=>{
         this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
