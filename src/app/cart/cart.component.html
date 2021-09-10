@@ -4,7 +4,7 @@
 <div  *ngFor="let citem of cartitems" class="cart-card" >
     <span class="close in" (click)="closeitem($event)" id="clo" >&times;</span>
 <img src={{citem.imag}} alt="">
-<button class="bttn" (click)="addtodb(citem.name,citem.price)">
+<button class="bttn" (click)="addtodb(citem.name,citem.price,citem.imag)">
     <div class="bttn-left"></div>
   <div class="bttn-right"></div>
   <span class="bttn-txt">Buy</span></button>

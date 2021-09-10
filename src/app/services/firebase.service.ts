@@ -12,9 +12,11 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 export class FirebaseService {
   isLoggedIn=false;
   private orderlist:AngularFireList<any>;
+  private userlist:AngularFireList<any>;
 
   constructor( private firebase: AngularFireDatabase,public firebaseAuth:AngularFireAuth,private cartsService: CartsService,private firestore: AngularFirestore) { 
     this.orderlist=this.firebase.list('orders');
+    this.userlist=this.firebase.list('users');
 
   }
 
@@ -41,8 +43,14 @@ export class FirebaseService {
   getUsers() {
     
    
-    this.orderlist=this.firebase.list('users');
-    return this.orderlist.snapshotChanges()
+    this.userlist=this.firebase.list('users');
+    return this.userlist.snapshotChanges()
+}
+getOrders() {
+    
+   
+  this.orderlist=this.firebase.list('orders');
+  return this.orderlist.snapshotChanges()
 }
   async signup(email:string,password:string,uname:string,mobile:string,addr:string)
   { 

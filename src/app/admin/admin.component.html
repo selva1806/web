@@ -1,0 +1,22 @@
+<app-head></app-head>
+<div class="order-cont">
+  <div class="order-card" *ngFor="let item of displayarray">
+    <span class="close" (click)="closeorder($event,item.orid)">&times;</span>
+
+      <img class="card-img" src="{{item.image}}" alt="">
+      <ul class="card-det">
+          <li>Name: {{item.uname}}</li>
+          <li>Mobile no: {{item.mobile}}</li>
+          <li>Email: {{item.email}}</li>
+          <li>Address: {{item.address}}</li>
+      </ul>
+      <ul class="card-det">
+          <li>Item name: {{item.itemname}}</li>
+          <li>Item quantity : 3</li>
+          <li>Price : ${{item.price}}</li>
+      </ul>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

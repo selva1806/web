@@ -1,0 +1,37 @@
+.order-cont{
+    background-color: rgb(247, 247, 247);
+padding:20px;
+margin-top: 100px;
+}
+.order-card{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    height:auto;
+    background-color: white;
+    border-radius: 10px;
+    transition: 1s;
+    margin-top: 30px;
+}
+
+.order-card:hover{
+    box-shadow: 20px 20px 20px rgba(109, 108, 108, 0.562);
+}
+.card-img{
+    width:300px;
+    height:300px;
+    padding: 10px;
+}
+.card-det{
+    list-style-type: none;
+    font-size: 22px;
+    padding:40px;
+    
+}
+.card-det li{
+    padding:10px;
+}
+.close{
+ position: absolute;
+  left: 97%;
+}

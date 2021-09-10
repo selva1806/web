@@ -74,4 +74,9 @@ updateUsers(key:string,email:string,uname:string,mobile:string,addr:string){
   username:uname,mobileno:mobile,emailadd:email,address:addr
 }}) ;
 }
+removeOrders(key:string)
+{
+  this.orderList.remove(key)
+  alert("order removed")
+}
 }
