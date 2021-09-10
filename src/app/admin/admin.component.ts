@@ -29,7 +29,7 @@ count=0;
          console.log(item.payload.val()[0].emailadd,user?.email)
     //   alert("1")
        
-           this.displayarray.push({orid:item.payload.val()[0].orderid,uname:item.payload.val()[0].username,image:item.payload.val()[0].image,email:item.payload.val()[0].email,address:item.payload.val()[0].address,mobile:item.payload.val()[0].mobileno,price:item.payload.val()[0].price,itemname:item.payload.val()[0].name})
+           this.displayarray.push({orid:item.payload.val()[0].orderid,uname:item.payload.val()[0].username,image:item.payload.val()[0].image,email:item.payload.val()[0].email,address:item.payload.val()[0].address,mobile:item.payload.val()[0].mobileno,price:item.payload.val()[0].price,itemname:item.payload.val()[0].name,quantity:item.payload.val()[0].quantity})
            this.count+=1; 
            console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
   
@@ -56,7 +56,7 @@ count=0;
      {     
          this._cartsService.removeOrders(String(item.key))
          this.count-=1;
-         window.location.href="/web#/admin"   
+       location.reload()
          //console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
           }
 

@@ -40,7 +40,7 @@ this.cartitems = this._cartsService.getcartitems();
 orderform:any;
  orderarray:any;
 randid:any;
- addtodb(itemname:string,itemcost:string,itemurl:string)
+ addtodb(itemname:string,itemcost:string,itemurl:string,quantity:string)
  { 
    this.randid=  Math.floor(Math.random() * (10000000000 - 1000000000)) + 1000000000;
 
@@ -51,7 +51,7 @@ randid:any;
         if(item.payload.val()[0].emailadd===user?.email)
         {
      console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
-     this.orderform=[{orderid:this.randid,name:itemname,price:itemcost,image:itemurl,username:item.payload.val()[0].username,address:item.payload.val()[0].address,mobileno:item.payload.val()[0].mobileno,email:item.payload.val()[0].emailadd}];
+     this.orderform=[{orderid:this.randid,name:itemname,price:itemcost,image:itemurl,username:item.payload.val()[0].username,address:item.payload.val()[0].address,mobileno:item.payload.val()[0].mobileno,email:item.payload.val()[0].emailadd,quantity:quantity}];
      this._cartsService.addOrdersToFirebase(this.orderform);   
 
     }

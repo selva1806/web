@@ -36,9 +36,9 @@ fullclose(evt:any){
 }
 cartitems:any=[];
 
-  addtocart(image:any,cost:any,namee:any){
+  addtocart(image:any,cost:any,namee:any,quantity:any){
 
-   var ele={imag:image,price:cost,name:namee}
+   var ele={imag:image,price:cost,name:namee,quantity:quantity}
     this._cartsService.addcartitems(ele);
 //   console.log(this.cartitems)
 
@@ -47,7 +47,7 @@ cartitems:any=[];
  orderarray:any;
  randid:any;
 
- addtodb(itemname:string,itemcost:string,itemurl:string)
+ addtodb(itemname:string,itemcost:string,itemurl:string,quantity:string)
  { 
   this.randid=  Math.floor(Math.random() * (10000000000 - 1000000000)) + 1000000000;
   this.firebaseSerivce.getUsers().subscribe(list=>{
@@ -57,7 +57,7 @@ cartitems:any=[];
         if(item.payload.val()[0].emailadd===user?.email)
         { 
      console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
-     this.orderform=[{orderid:this.randid,name:itemname,price:itemcost,image:itemurl,username:item.payload.val()[0].username,address:item.payload.val()[0].address,mobileno:item.payload.val()[0].mobileno,email:item.payload.val()[0].emailadd}];
+     this.orderform=[{orderid:this.randid,name:itemname,price:itemcost,image:itemurl,username:item.payload.val()[0].username,address:item.payload.val()[0].address,mobileno:item.payload.val()[0].mobileno,email:item.payload.val()[0].emailadd,quantity:quantity}];
      this._cartsService.addOrdersToFirebase(this.orderform);   
     }
           
@@ -71,13 +71,15 @@ cartitems:any=[];
  }
  
 tc=0;
-calc(num:string,cost:string)
+calc(evt:any,num:string,cost:string)
 {
   this.tc=0;
   this.tc=Number(num)*Number(cost);
-  let element = <HTMLInputElement>document.getElementsByClassName("ful-rate")[0]
-  element.value = String(this.tc)
+  var v=document.getElementById("itcost");
+  evt.target.parentElement.parentElement.parentElement.parentElement.childNodes[2].innerHTML="$"+this.tc;
+
  // alert(this.tc)
+ // v?.setAttribute("value",String(this.tc));
 
 }
 }
