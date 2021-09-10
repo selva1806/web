@@ -1,6 +1,6 @@
 <div class="cart-cont" id="cart">
     <span class="close" (click)="closecart($event)" >&times;</span>
-
+ <span class="empty">Empty!!</span>
 <div  *ngFor="let citem of cartitems" class="cart-card" >
     <span class="close in" (click)="closeitem($event)" id="clo" >&times;</span>
 <img src={{citem.imag}} alt="">

@@ -9,6 +9,8 @@ import { FirebaseService } from '../services/firebase.service';
 })
 export class CartComponent implements OnInit {
 cartitems:any=[];
+
+
   constructor(private _cartsService: CartsService,public firebaseSerivce: FirebaseService) { }
 
   ngOnInit(): void {
@@ -23,6 +25,7 @@ closecart(evt:any){
   
 }
 
+
 closeitem(evt:any)
 {
   var image=evt.target.parentElement.childNodes[1].src;
@@ -33,8 +36,8 @@ closeitem(evt:any)
   this.cartitems = this._cartsService.removecartitems(ele);
 //  evt.target.parentElement.remove();
 this.cartitems = this._cartsService.getcartitems();
-
 }
+
 
 
 orderform:any;
