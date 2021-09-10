@@ -23,11 +23,11 @@ export class LoginComponent implements OnInit {
   this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
     if(user?.email)
     { 
-     
+      
       if(user?.email==="ss@gmail.com")
       {
         this.router.navigate(['/admin']);
-
+ 
       }
       else
       {
