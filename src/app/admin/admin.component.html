@@ -1,5 +1,6 @@
 <app-head></app-head>
 <div class="order-cont">
+    <h1 class="title">Current Orders: {{count}}</h1>
   <div class="order-card" *ngFor="let item of displayarray">
     <span class="close" (click)="closeorder($event,item.orid)">&times;</span>
 

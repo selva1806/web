@@ -13,6 +13,7 @@ export class AdminComponent implements OnInit {
   orderarray:any;
 displayarray:any=[];
 ele:any;
+count=0;
   ngOnInit(): void {
     this.firebaseSerivce.getOrders().subscribe(list=>{
       this.orderarray=list.map(item=>{
@@ -21,7 +22,8 @@ ele:any;
     //   alert("1")
        
            this.displayarray.push({orid:item.payload.val()[0].orderid,uname:item.payload.val()[0].username,image:item.payload.val()[0].image,email:item.payload.val()[0].email,address:item.payload.val()[0].address,mobile:item.payload.val()[0].mobileno,price:item.payload.val()[0].price,itemname:item.payload.val()[0].name})
-            console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+           this.count+=1; 
+           console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
   
 
           })
@@ -45,6 +47,7 @@ ele:any;
      if(orderid===item.payload.val()[0].orderid)    
      {     
          this._cartsService.removeOrders(String(item.key))
+         this.count-=1;
          window.location.href="/web#/admin"   
          //console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
           }

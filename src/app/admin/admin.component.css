@@ -2,8 +2,10 @@
     background-color: rgb(247, 247, 247);
 padding:20px;
 margin-top: 100px;
+min-height: 500px;
 }
 .order-card{
+    
     width:100%;
     display: flex;
     flex-wrap: wrap;
@@ -34,4 +36,10 @@ margin-top: 100px;
 .close{
  position: absolute;
   left: 97%;
+}
+.title{
+    text-align: center;
+    color: rgb(168, 168, 168);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
 }
