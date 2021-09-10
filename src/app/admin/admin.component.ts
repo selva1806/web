@@ -51,7 +51,7 @@ count=0;
       this.orderarray=list.map(item=>{
         this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
          console.log(item.payload.val()[0].emailadd,user?.email)
-    //   alert("1")
+    //   alert("1") 
      if(orderid===item.payload.val()[0].orderid)    
      {     
          this._cartsService.removeOrders(String(item.key))
