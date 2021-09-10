@@ -14,15 +14,6 @@ export class CaloginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  checkadmin()
-  {
-    this.firebaseService.firebaseAuth.onAuthStateChanged(user=>{
-      if(user?.email==="ss@gmail.com")
-      {
-        this.router.navigate(['/admin']);
-      }
-      
-    })
-  }
+  
 
 }

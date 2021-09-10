@@ -65,7 +65,7 @@ public cartitems:any=[];
   addOrdersToFirebase(order:any){
   this.orderList.push(order);
   alert("order placed");
-  window.location.href="/web/"
+  //window.location.href="/web/"
   }
  addUsersTOFirebase(user:any){
   this.userList.push(user);

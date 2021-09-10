@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FirebaseService } from '../services/firebase.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { FirebaseService } from '../services/firebase.service';
 export class LoginComponent implements OnInit {
 
   isSignedIn=false;
-  constructor(public firebaseSerivce: FirebaseService){}
+  constructor(public firebaseSerivce: FirebaseService,public router: Router){}
     ngOnInit(){
   if(localStorage.getItem('user')!==null)
   {
@@ -19,6 +20,22 @@ export class LoginComponent implements OnInit {
   else{
     this.isSignedIn=false;
   }
+  this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+    if(user?.email)
+    { 
+     
+      if(user?.email==="ss@gmail.com")
+      {
+        this.router.navigate(['/admin']);
+
+      }
+      else
+      {
+     this.router.navigate(['/products']);
+    }   
+    }
+    
+  })
     }
   
   async resetPass(email:string)
