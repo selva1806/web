@@ -20,7 +20,7 @@
       <span class="close pr" (click)="fullclose($event)" >&times;</span>
  
    <h1 class="cen">Preview</h1>
-
+<hr>
      <div class="row low">
       <div class="col-md">
         <img src="{{item.imag}}"  class="pimg" alt="">
@@ -39,12 +39,15 @@
       </div>
       
      </div>
+     <br><br><hr>
      <button class="bttn padl" (click)="addtodb(item.name,item.cost,item.imag,num.value)">
       Buy</button>
+      <br><br><br><br><br>
     </div>
     
   
   </div>
+  <hr>
     <div class="row">
       <div class="col-md">
       <img src={{item.imag}} alt="" width="460" height="345">
@@ -52,6 +55,7 @@
     <div class="col-md">
 
           <h1>{{item.name}}</h1>
+          <hr>
           <p class="txtp">{{item.p}}
           </p>
             <label for="quant" id="quantt" >Quantity:  <input type="number" #num (change)="calc($event,num.value,item.cost)" id="quant" class="quant" min="1" required value="1" max="10">
@@ -72,6 +76,7 @@
         </div>
 
         </div>
+        <br><hr>
         <p class="ful-rate" id="totall" >₹{{item.cost}}</p>
   </div>
 

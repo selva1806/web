@@ -118,8 +118,8 @@ calc(evt:any,num:string,cost:string)
 {
   this.tc=0;
   this.tc=Number(num)*Number(cost);
-  evt.target.parentElement.parentElement.parentElement.parentElement.childNodes[3].innerHTML="₹"+this.tc;
-  evt.target.parentElement.parentElement.parentElement.parentElement.childNodes[1].childNodes[0].childNodes[2].childNodes[2].childNodes[3].innerHTML="Total:₹"+this.tc;
+  evt.target.parentElement.parentElement.parentElement.parentElement.childNodes[6].innerHTML="₹"+this.tc;
+  evt.target.parentElement.parentElement.parentElement.parentElement.childNodes[1].childNodes[0].childNodes[3].childNodes[2].childNodes[3].innerHTML="Total:₹"+this.tc;
 
   
 

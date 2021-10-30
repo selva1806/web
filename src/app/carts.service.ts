@@ -33,7 +33,9 @@ public cartitems:any=[];
   }
   if(a===0)
   {this.cartitems.push(item);
+    localStorage.setItem('cart', JSON.stringify(this.cartitems));
   console.log(this.cartitems)
+  console.log(localStorage.getItem('cart'))
   alert("Item added to cart")
 
   } 

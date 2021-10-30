@@ -4,7 +4,7 @@
       <span class="close pr" id="fcl" (click)="fullclose($event)" >&times;</span>
  
    <h1 class="cen">Preview</h1>
-
+<hr>
      <div class="row low">
       <div class="col-md">
         <img src="{{citem.imag}}"  class="pimg" alt="">
@@ -22,7 +22,8 @@
       </div>
       
      </div>
-     <button class="bttn1 padl" (click)="addtodb(citem.name,citem.price,citem.imag,citem.quantity)">
+     <hr>
+     <button class=" bttn1 padl " (click)="addtodb(citem.name,citem.price,citem.imag,citem.quantity)">
       Buy</button>
     </div>
   </div>
@@ -35,11 +36,8 @@
 
     <span class="close in" (click)="closeitem($event)" id="clo" >&times;</span>
 <img src={{citem.imag}} alt="">
-<button class="bttn" (click)="show($event,citem.name)">
-    <div class="bttn-left"></div>
-  <div class="bttn-right"></div>
-  <span class="bttn-txt">Buy</span></button>
- <p>₹{{citem.price*citem.quantity}}</p>
+<button class="buyall bttn1 padll" id="buy" (click)="show($event,citem.name)">
+    Buy</button>
+ <p class="ty">₹{{citem.price*citem.quantity}}</p>
 </div>
-
 </div>
