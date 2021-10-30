@@ -24,7 +24,9 @@ closecart(evt:any){
 
   
 }
-
+fullclose(evt:any){
+  var v=evt.target.parentElement.parentElement.parentElement.style.display="none";
+}
 
 closeitem(evt:any)
 {
@@ -39,6 +41,7 @@ this.cartitems = this._cartsService.getcartitems();
 }
 
 
+nme:String | undefined;
 
 orderform:any;
  orderarray:any;
@@ -65,11 +68,49 @@ randid:any;
     
       })
       })
+      document.getElementById("fcl")?.click()
   document.getElementById("clo")?.click()
  }
  
 
+ show(evt:any,na:String){
+  var v=evt.target;
+  this.nme=na;
+  v.parentElement.parentElement.parentElement.childNodes[0].style.display="block";
+  
+    this.firebaseSerivce.getUsers().subscribe(list=>{
+      this.orderarray=list.map(item=>{
+        this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+         console.log(item.payload.val()[0].emailadd,user?.email)
+      // alert("1")
+          if(item.payload.val()[0].emailadd===user?.email)
+          {
 
+            let mc = document.getElementById("name1") as HTMLInputElement;
+            
+            mc.innerHTML = "Name : "+item.payload.val()[0].username;
+            mc = document.getElementById("emailid1") as HTMLInputElement;
+            mc.innerHTML = "Email : "+item.payload.val()[0].emailadd;
+            mc = document.getElementById("phone1") as HTMLInputElement;
+            mc.innerHTML = "Mobile : "+item.payload.val()[0].mobileno;
+            mc = document.getElementById("address1") as HTMLInputElement;
+            mc.innerHTML = "Address : "+item.payload.val()[0].address;
+  
+  
+            console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+  
+      }
+            
+          })
+      //  console.log(item.payload.val()[0].emailadd)
+        
+      
+        })
+        })
+  
+  
+
+}
 
 
 }

@@ -5,13 +5,45 @@
    
   </div>
 <app-productdis></app-productdis>
+
 <div class="p-container">
+  
 <div class="p-card" *ngFor="let item of items">
   <img src={{item.imag}} alt="rand">
   <button class="hovr-butt" (click)="fullopen($event)">view</button>
   <div class="full-view" id={{item.id}}>
     <div class="cl">
     <span class="close" (click)="fullclose($event)" >&times;</span>
+  </div>
+  <div class="preview" id="prev">
+    <div class="prebox">
+      <span class="close pr" (click)="fullclose($event)" >&times;</span>
+ 
+   <h1 class="cen">Preview</h1>
+
+     <div class="row low">
+      <div class="col-md">
+        <img src="{{item.imag}}"  class="pimg" alt="">
+      </div>
+      <div class="col-md">
+        <p class="fnt" id="name1" >{{name}}</p>
+        <p class="fnt" id="address1">{{add}}</p>
+        <p class="fnt" id="phone1">{{mobile}}</p>
+        <p class="fnt" id="emailid1">{{email}}</p>
+      </div>
+      <div class="col-md">
+        <p class="fnt">Product:{{item.name}}</p>
+        <p class="fnt">Quantity:{{num.value}}</p>
+        <p class="fnt">Price:{{item.cost}}</p>
+        <p class="fnt" id="total1">Total:{{item.cost}}</p>
+      </div>
+      
+     </div>
+     <button class="bttn padl" (click)="addtodb(item.name,item.cost,item.imag,num.value)">
+      Buy</button>
+    </div>
+    
+  
   </div>
     <div class="row">
       <div class="col-md">
@@ -20,7 +52,8 @@
     <div class="col-md">
 
           <h1>{{item.name}}</h1>
-          <p class="txtp">Not so! A cover letter serves an important purpose: it presents the case for why you should be hired and distinguishes you from other candidates. Your cover letter is where you can show your passion for the position and the company, and highlight your most relevant qualifications. A well-written cover letter will supplement your resume by focusing on why you're a well-qualified candidate for the job.</p>
+          <p class="txtp">{{item.p}}
+          </p>
             <label for="quant" id="quantt" >Quantity:  <input type="number" #num (change)="calc($event,num.value,item.cost)" id="quant" class="quant" min="1" required value="1" max="10">
             </label>
           <div class="row ">
@@ -30,18 +63,20 @@
         </div>
         <div class="col">
 
-          <button class="bttn padl" (click)="addtodb(item.name,item.cost,item.imag,num.value)">
+          <button class="bttn padl" (click)="show($event)">
             Buy</button>
 </div>
+
+
         </div>
         </div>
 
         </div>
-        <p class="ful-rate" >${{item.cost}}</p>
+        <p class="ful-rate" id="totall" >₹{{item.cost}}</p>
   </div>
 
   <div class="row">
-  <p class="rate">${{item.cost}}</p>
+  <p class="rate">₹{{item.cost}}</p>
     <button class="bttn" (click)="addtocart(item.imag,item.cost,item.name,num.value)">Add</button>
   
   </div>

@@ -15,16 +15,20 @@ export class ProductsComponent implements OnInit {
     window.scrollTo(0, 0);
 
     this.cartitems = this._cartsService.getcartitems();
+
   }
+
+
+
   items = [
-{ name:'item1' ,imag:'assets/img/pr1.jpg',id:'pr1',cost : '18'},
-{ name:'item2' ,imag:'assets/img/pr2.jpeg',id:'pr2',cost : '12'},
-{ name:'item3' ,imag:'assets/img/pr3.jpg',id:'pr3',cost : '17'},
-{ name:'item4' ,imag:'assets/img/pr4.jpg',id:'pr4',cost : '21'},
-{ name:'item5' ,imag:'assets/img/pr5.jpg',id:'pr5',cost : '23'},
-{ name:'item6' ,imag:'assets/img/pr6.jpg',id:'pr6',cost : '15'},
-{ name:'item7' ,imag:'assets/img/pr7.jpg',id:'pr7',cost : '25'},
-{ name:'item8' ,imag:'assets/img/pr8.jpeg',id:'pr8',cost : '24'}
+{ name:'white limbus sheet',p:'The sheet is white in colour with dimensions starting according to the customer requirement.' ,imag:'assets/img/pr1.jpg',id:'pr1',cost : '18'},
+{ name:'grey limbus asbestos sheet',p:'These light blue sheets are dried in the sun for a longer period to make it strong and long lasting.' ,imag:'assets/img/pr2.jpeg',id:'pr2',cost : '12'},
+{ name:'blue cobe asbestos sheet',p:'The sheet is available in dark blue colour. The sheets has a higher density.' ,imag:'assets/img/pr3.jpg',id:'pr3',cost : '17'},
+{ name:'sandal trax sheet',p:'These sheets are cut into longer dimensions and are double folded.' ,imag:'assets/img/pr4.jpg',id:'pr4',cost : '21'},
+{ name:'white hana sheet',p:'The sheets are small compared to other products available. They are smaller in density.' ,imag:'assets/img/pr5.jpg',id:'pr5',cost : '23'},
+{ name:'rasan blue sheet',p:'The blue sheets are more flexible.' ,imag:'assets/img/pr6.jpg',id:'pr6',cost : '15'},
+{ name:'whitish brown sheet',p:'These sheets are cut into longer dimensions and are double folded.' ,imag:'assets/img/pr7.jpg',id:'pr7',cost : '25'},
+{ name:'darkblue yagu sheet',p:'The sheets has a higher density.The Dark blue sheets are more flexible.' ,imag:'assets/img/pr8.jpeg',id:'pr8',cost : '24'}
 ];
 
 fullopen(evt:any)
@@ -43,6 +47,10 @@ cartitems:any=[];
 //   console.log(this.cartitems)
 
   }
+  name:String | undefined
+  email:String | undefined
+  mobile:String | undefined
+  add:String | undefined
  orderform:any;
  orderarray:any;
  randid:any;
@@ -69,17 +77,56 @@ cartitems:any=[];
       })
    
  }
- 
+ show(evt:any){
+  var v=evt.target;
+  v.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[1].style.display="block";
+  
+    this.firebaseSerivce.getUsers().subscribe(list=>{
+      this.orderarray=list.map(item=>{
+        this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+         console.log(item.payload.val()[0].emailadd,user?.email)
+      // alert("1")
+          if(item.payload.val()[0].emailadd===user?.email)
+          {
+
+            let mc = document.getElementById("name1") as HTMLInputElement;
+            this.name= "Name : "+item.payload.val()[0].username;
+            mc = document.getElementById("emailid1") as HTMLInputElement;
+            this.email = "Email : "+item.payload.val()[0].emailadd;
+            mc = document.getElementById("phone1") as HTMLInputElement;
+            this.mobile = "Mobile : "+item.payload.val()[0].mobileno;
+            mc = document.getElementById("address1") as HTMLInputElement;
+            this.add = "Address : "+item.payload.val()[0].address;
+  
+  
+            console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+  
+      }
+            
+          })
+      //  console.log(item.payload.val()[0].emailadd)
+        
+      
+        })
+        })
+  
+  
+
+}
 tc=0;
 calc(evt:any,num:string,cost:string)
 {
   this.tc=0;
   this.tc=Number(num)*Number(cost);
-  var v=document.getElementById("itcost");
-  evt.target.parentElement.parentElement.parentElement.parentElement.childNodes[2].innerHTML="$"+this.tc;
+  let mc = document.getElementById("totall") as HTMLInputElement;
+  mc.innerHTML = "$"+this.tc;
+   mc = document.getElementById("total1") as HTMLInputElement;
+   mc.innerHTML = "Total:$"+this.tc;
 
+  console.log(mc);
  // alert(this.tc)
  // v?.setAttribute("value",String(this.tc));
 
 }
+
 }

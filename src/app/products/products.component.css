@@ -6,6 +6,49 @@
     font-family: producthead;
     src: url(https://selva1806.github.io/web/assets/font/Comfortaa-VariableFont_wght.ttf);
   }
+.pr{
+    float: right;
+}
+.low{
+    padding-top:20px;
+    display: flexbox;
+}
+
+.fnt{
+    font-size: 18px;
+}
+.prebox{
+background-color: rgb(255, 255, 255);
+width:90%;
+height:auto;
+display: block;
+transform: translate(0%,0%);
+padding:20px;
+padding-bottom: 200px;
+
+justify-content: center;
+border-radius: 5px;
+border: 2px solid rgb(8, 4, 255);
+}
+.cen{
+    text-align: center;
+}
+.preview{
+    display: none;
+width:100%;
+height:100%;
+background-color: rgba(255, 255, 255, 0.842);
+position: fixed;
+overflow: scroll;
+z-index: 9;
+
+}
+.flexcont{
+display:flex;
+flex-wrap: nowrap;
+
+
+}
 .rate{
     padding-left:30px;
     padding-top:20px;
@@ -286,3 +329,7 @@ background: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%
     z-index: 6;
 
   }
+  .full-view  .pimg{
+    width: 200px;
+    height:200px;
+}

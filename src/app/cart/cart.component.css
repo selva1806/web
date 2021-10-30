@@ -1,3 +1,71 @@
+.bttn1{
+    background-color: rgb(253, 0, 219);
+    color:white;
+    width:80px;
+    height:40px;
+    overflow: hidden;
+    border:2px solid ;
+    border:2px solid rgb(255, 252, 252);
+
+     margin-top: 15px;
+     margin-left: 100px;
+    transition:.5s;
+    outline: none;
+
+    
+}
+.bttn1:hover{
+    border-image: linear-gradient(106deg, rgba(245,9,236,1) 15%, rgba(0,121,255,1) 54%, rgba(245,9,236,1) 85%);
+    border-image-slice: 1;
+
+    background-color: white;
+    color: rgb(253, 0, 219);
+
+}
+.padl{
+    margin-left: 10px;
+   
+ }
+.pr{
+    float: right;
+}
+.low{
+    padding-top:20px;
+    display: flexbox;
+}
+
+.fnt{
+    font-size: 18px;
+}
+.prebox{
+background-color: rgb(255, 255, 255);
+width:90%;
+height:auto;
+display: block;
+transform: translate(5%,10%);
+padding:20px;
+justify-content: center;
+border-radius: 5px;
+border: 2px solid rgb(8, 4, 255);
+}
+.pimg{
+    width: 200px;
+    height:200px;
+    transform: translateY(-20px);
+}
+.cen{
+    text-align: center;
+}
+.preview{
+    display: none;
+width:100%;
+height:100%;
+background-color: rgba(241, 241, 241, 0.842);
+position: fixed;
+overflow: scroll;
+z-index: 9;
+
+}
 .cart-cont{
     width:350px;
     height:100%;
