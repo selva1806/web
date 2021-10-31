@@ -26,16 +26,18 @@
         <img src="{{item.imag}}"  class="pimg" alt="">
       </div>
       <div class="col-md">
-        <p class="fnt" id="name1" >{{name}}</p>
-        <p class="fnt" id="address1">{{add}}</p>
-        <p class="fnt" id="phone1">{{mobile}}</p>
-        <p class="fnt" id="emailid1">{{email}}</p>
+        <p class="fnt" id="name1" ><label class="colo">Name :&nbsp;</label>{{name}}</p>
+        <p class="fnt" id="address1"><label class="colo">Address :&nbsp;</label>{{add}}</p>
+        <p class="fnt" id="phone1"><label class="colo">Mobile :&nbsp;</label>{{mobile}}</p>
+        <p class="fnt" id="emailid1"><label class="colo">Email :&nbsp;</label>{{email}}</p>
       </div>
       <div class="col-md">
-        <p class="fnt">Product:{{item.name}}</p>
-        <p class="fnt">Quantity:{{num.value}}</p>
-        <p class="fnt">Price:{{item.cost}}</p>
-        <p class="fnt" id="total1">Total:{{item.cost}}</p>
+        <p class="fnt"><label class="colo"> Product:&nbsp;</label>{{item.name}}</p>
+        <p class="fnt"><label class="colo">Quantity:&nbsp;</label>{{num.value}}</p>
+        <p class="fnt"><label class="colo">Price:&nbsp;</label>₹{{item.cost}}</p>
+        <p class="fnt colo" id="total1">Total : ₹{{item.cost}}</p>
+        <p class="fnt"><label class="colo">Payment Mode:&nbsp;</label>COD</p>
+
       </div>
       
      </div>

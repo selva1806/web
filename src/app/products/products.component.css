@@ -6,6 +6,10 @@
     font-family: producthead;
     src: url(https://selva1806.github.io/web/assets/font/Comfortaa-VariableFont_wght.ttf);
   }
+  .colo{
+      color: rgb(69, 69, 240);
+      font-weight: bolder;
+  }
 .pr{
     float: right;
 }
@@ -28,7 +32,7 @@ padding:20px;
 
 justify-content: center;
 border-radius: 5px;
-border: 2px solid rgb(191, 190, 241);
+border: 2px solid rgb(55, 52, 226);
 }
 .cen{
     text-align: center;

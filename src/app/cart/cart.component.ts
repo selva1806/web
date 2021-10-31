@@ -10,6 +10,10 @@ import { FirebaseService } from '../services/firebase.service';
 export class CartComponent implements OnInit {
 cartitems:any=[];
 
+name:String | undefined
+email:String | undefined
+mobile:String | undefined
+add:String | undefined
 
   constructor(private _cartsService: CartsService,public firebaseSerivce: FirebaseService) { }
 
@@ -87,14 +91,14 @@ randid:any;
           {
 
             let mc = document.getElementById("name1") as HTMLInputElement;
-            
-            mc.innerHTML = "Name : "+item.payload.val()[0].username;
+            this.name= ""+item.payload.val()[0].username;
             mc = document.getElementById("emailid1") as HTMLInputElement;
-            mc.innerHTML = "Email : "+item.payload.val()[0].emailadd;
+            this.email = ""+item.payload.val()[0].emailadd;
             mc = document.getElementById("phone1") as HTMLInputElement;
-            mc.innerHTML = "Mobile : "+item.payload.val()[0].mobileno;
+            this.mobile = ""+item.payload.val()[0].mobileno;
             mc = document.getElementById("address1") as HTMLInputElement;
-            mc.innerHTML = "Address : "+item.payload.val()[0].address;
+            this.add = ""+item.payload.val()[0].address;
+  
   
   
             console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
