@@ -40,7 +40,6 @@ textarea,textarea:focus,input,input:focus{
 }
 .login-input,.login-input:focus{
     border:1px solid rgb(172, 172, 172);
-   border-radius: 5px;
    height: 50px;
    width: 90%;
    padding-left: 10%;
@@ -50,12 +49,11 @@ textarea,textarea:focus,input,input:focus{
    border-top: none;
    border-left: none;
    border-right: none;
-   border-radius: -20px;
    border-bottom-color:white ;
    background: inherit;
 }
 .login-input::placeholder{
-    color: rgb(0, 0, 0);
+    color: rgb(124, 124, 124);
 }
 
 .mob-log{
@@ -103,12 +101,11 @@ background: linear-gradient(355deg, rgba(255,0,0,1) 6%, rgba(225,50,50,1) 33%, r
        border-top: none;
        border-left: none;
        border-right: none;
-       border-radius: -20px;
        border-bottom-color:rgb(0, 0, 0) ;
        background: inherit;
     }
     .login-input::placeholder{
-        color: rgb(0, 0, 0);
+        color: rgb(114, 114, 114);
     }
     
     

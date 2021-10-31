@@ -25,10 +25,12 @@
     z-index: 2;
     position: relative;
     text-align: center;
+    color: white;
 }
 .fpass{
     text-decoration: none;
     float: right;
+    color: white;
 }
 .col-sm-10{
 padding-left: 20%;
@@ -40,8 +42,8 @@ input,input:focus{
 }
 .login-input{
     border:1px solid rgb(172, 172, 172);
-   border-radius: 5px;
-   height: 50px;
+border-radius: 5px;
+    height: 50px;
    width: 100%;
    padding-left: 10%;
    outline: none;
@@ -95,6 +97,9 @@ transition: 1s;
         display:flex;
         margin-top: 0px;
     }
+    .fpass{
+        color: blue;
+    }
     .login-form{
         margin-top:0px;
         background-color: white;
@@ -103,6 +108,9 @@ transition: 1s;
         border-radius: 20px;
         height: auto;
         
+    }
+    .createp{
+        color: black;
     }
     .login-container{
         padding-bottom: 10px;

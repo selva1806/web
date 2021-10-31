@@ -6,7 +6,7 @@
   <h1 style="padding-bottom: 10px;text-align: center;"class=" fadeintop">Contact Us</h1>
       <div class="form-row">
       <div class="form-group col-md-6">
-          <input type="text" class="form-control " required id="user" #user  placeholder="Name" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
+          <input type="text" class="form-control " minlength="4" required id="user" #user  placeholder="Name" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
           <p id="qu-usr"></p>
         </div>
           <div class="form-group col-md-6">
@@ -16,16 +16,16 @@
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <input type="text" class="form-control " required id="mobile" #mobile  placeholder="Mobile" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
+              <input type="text" class="form-control " minlength="10" maxlength="10" required id="mobile" #mobile  placeholder="Mobile" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
               <p id="qu-numcheck"></p>
             </div>
             <div class="form-group col-md-6">
-              <input type="text" class="form-control " required id="subject" #subject  placeholder="Subject" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
+              <input type="text" class="form-control " minlength="4" required id="subject" #subject  placeholder="Subject" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150">
               <p id="subcheck"></p>
             </div>
           </div>
             <div class="form-group">
-              <textarea class="form-control add " id="message" required #message  placeholder="Enter your Message here" rows="3" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150"></textarea>
+              <textarea class="form-control add " id="message" minlength="5" required #message  placeholder="Enter your Message here" rows="3" data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150"></textarea>
               <p id="qu-msgcheck"></p>
             </div>
             <div class="form-group " data-aos="fade-up" data-aos-duration="4000"  data-aos-delay="150"> 

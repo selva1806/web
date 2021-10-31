@@ -40,8 +40,15 @@ export class LoginComponent implements OnInit {
   
   async resetPass(email:string)
   {
+    if(email.length === 0 || !email.includes('@gmail.com'))
+    {
+      alert("invalid email")
+    }
+    else
+    {
     this.firebaseSerivce.firebaseAuth.sendPasswordResetEmail(email);
     alert("reset link sent to "+email+" successfully")
+  }
   }
   
     async onSignin(email:string,password:string)

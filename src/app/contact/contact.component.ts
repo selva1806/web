@@ -15,9 +15,14 @@ export class ContactComponent implements OnInit {
   }
   contact:any;
   contactform(user:string,email:string,mobile:string,subject:string,message:string){
-  this.contact=[{user:user,email:email,mobile:mobile,subject:subject,message:message}]
+    if(user.length === 0 || email.length === 0 ||mobile.length === 0 ||subject.length === 0 ||message.length === 0  )
+  {
+    alert("please fill all the fields")
+  }
+  else{
+    this.contact=[{user:user,email:email,mobile:mobile,subject:subject,message:message}]
   this._cartsService.contactAdd(this.contact)
   this.router.navigate(['/'])
   }
-
+}
 }
