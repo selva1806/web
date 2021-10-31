@@ -27,7 +27,6 @@ overflow: hidden;
 }
 .carrd:hover{
     border-radius: 20px;
-    
     box-shadow: 8px 8px 25px  rgb(109, 109, 109);
 
 }

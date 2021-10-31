@@ -3,7 +3,6 @@
     <h1 class="title">Current Orders: {{count}}</h1>
   <div class="order-card" *ngFor="let item of displayarray">
     <span class="close" (click)="closeorder($event,item.orid)">&times;</span>
-
       <img class="card-img" src="{{item.image}}" alt="">
       <ul class="card-det">
           <li>Name: {{item.uname}}</li>
@@ -14,9 +13,10 @@
       <ul class="card-det">
           <li>Item name: {{item.itemname}}</li>
           <li>Item quantity : {{item.quantity}}</li>
-          <li>Price : ${{item.price}}</li>
-          <li>Total : ${{item.quantity*item.price}}</li>
+          <li>Price : ₹{{item.price}}</li>
+          <li>Total : ₹{{item.quantity*item.price}}</li>
       </ul>
+      
   </div>
 
 </div>

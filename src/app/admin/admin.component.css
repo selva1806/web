@@ -12,8 +12,10 @@ min-height: 500px;
     height:auto;
     background-color: white;
     border-radius: 10px;
+    border:5px solid rgb(47, 47, 252);
     transition: 1s;
     margin-top: 30px;
+
 }
 
 .order-card:hover{
@@ -28,14 +30,32 @@ min-height: 500px;
     list-style-type: none;
     font-size: 22px;
     padding:40px;
+}
+@media screen and (max-width:400px) {
+    .card-img{
+        margin-top:-70px;
+        }
+}
+@media screen and (max-width:520px) {
+    .card-det{
+        font-size: .9rem;
+    padding-top:0px;
+    }
     
 }
 .card-det li{
     padding:10px;
 }
-.close{
- position: absolute;
-  left: 97%;
+.close{   
+    margin-left: 10px;
+    margin-top: 10px;
+     color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-right: 20px;
+    z-index: 6;
 }
 .title{
     text-align: center;
