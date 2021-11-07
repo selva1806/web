@@ -28,7 +28,6 @@ export class FirebaseService {
       localStorage.setItem('user',JSON.stringify(res.user))
       this.firebaseAuth.onAuthStateChanged(user=>{
       console.log(this.firebaseAuth.authState +" f")
-     //   alert(this.firebaseAuth.authState)
       })
       alert("logged in " )
       window.location.href="/web/";

@@ -52,6 +52,11 @@ orderform:any;
 randid:any;
  addtodb(itemname:string,itemcost:string,itemurl:string,quantity:string)
  { 
+   if(this.name === undefined)
+   {
+     alert("please login")
+   }
+   else{
    this.randid=  Math.floor(Math.random() * (10000000000 - 1000000000)) + 1000000000;
 
   this.firebaseSerivce.getUsers().subscribe(list=>{
@@ -75,6 +80,7 @@ randid:any;
       document.getElementById("fcl")?.click()
   document.getElementById("clo")?.click()
  }
+}
  
 
  show(evt:any,na:String){

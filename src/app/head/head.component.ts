@@ -11,17 +11,20 @@ export class HeadComponent implements OnInit {
   @Output() isLogout = new EventEmitter<void>()
   
 
-  
+  admin=false;
   isSignedIn=false;
+  router: any;
   constructor(private _cartsService: CartsService,public firebaseSerivce: FirebaseService) { }
     ngOnInit(){
   if(localStorage.getItem('user')!==null)
   {
     this.isSignedIn=true;
+ 
   }
   else{
     this.isSignedIn=false;
   }
+  
     }
     orderarray:any;
 

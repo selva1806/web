@@ -57,17 +57,29 @@ cartitems:any=[];
 
  addtodb(itemname:string,itemcost:string,itemurl:string,quantity:string)
  { 
+  if(this.name === undefined)
+  {
+    alert("please login")
+  }
+  else{
+
   this.randid=  Math.floor(Math.random() * (10000000000 - 1000000000)) + 1000000000;
   this.firebaseSerivce.getUsers().subscribe(list=>{
     this.orderarray=list.map(item=>{
+
       this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
      //   console.log(item.payload.val()[0].emailadd,user?.email)
+     
         if(item.payload.val()[0].emailadd===user?.email)
         { 
+          if(this.orderform!==null)
+     {
      console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
      this.orderform=[{orderid:this.randid,name:itemname,price:itemcost,image:itemurl,username:item.payload.val()[0].username,address:item.payload.val()[0].address,mobileno:item.payload.val()[0].mobileno,email:item.payload.val()[0].emailadd,quantity:quantity}];
-     this._cartsService.addOrdersToFirebase(this.orderform);   
+     this._cartsService.addOrdersToFirebase(this.orderform);  
+     this.orderform=null; 
     }
+  }
           
         })
     //  console.log(item.payload.val()[0].emailadd)
@@ -75,7 +87,7 @@ cartitems:any=[];
     
       })
       })
-   
+    }
  }
  show(evt:any){
   var v=evt.target;
