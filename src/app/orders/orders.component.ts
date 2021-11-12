@@ -20,7 +20,36 @@ add:String | undefined
   constructor(private _cartsService: CartsService,public firebaseSerivce: FirebaseService) { }
 
   ngOnInit(): void {
-    this.cartitems = this._cartsService.getcartitems();
+    this.firebaseSerivce.getUsers().subscribe(list=>{
+      this.orderarray=list.map(item=>{
+        this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+      //   console.log(item.payload.val()[0].emailadd,user?.email)
+      // alert("1")
+          if(item.payload.val()[0].emailadd===user?.email)
+          {
+
+            let mc = document.getElementById("name1") as HTMLInputElement;
+            this.name= ""+item.payload.val()[0].username;
+            mc = document.getElementById("emailid1") as HTMLInputElement;
+            this.email = ""+item.payload.val()[0].emailadd;
+            mc = document.getElementById("phone1") as HTMLInputElement;
+            this.mobile = ""+item.payload.val()[0].mobileno;
+            mc = document.getElementById("address1") as HTMLInputElement;
+            this.add = ""+item.payload.val()[0].address;
+  
+          //  this.cartitems = this._cartsService.getcartitems(String(this.email));
+
+  
+            //console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+  
+      }
+            
+          })
+      //  console.log(item.payload.val()[0].emailadd)
+        
+      
+        })
+        })
     
   this.firebaseSerivce.getOrders().subscribe(list=>{
 
@@ -59,17 +88,7 @@ fullclose(evt:any){
   var v=evt.target.parentElement.parentElement.parentElement.style.display="none";
 }
 
-closeitem(evt:any)
-{
-  var image=evt.target.parentElement.childNodes[1].src;
-  var cost=evt.target.parentElement.childNodes[3].innerHTML.slice(1);
-  var ele={imag:image,price:cost}
 
-  console.log(ele)
-  this.cartitems = this._cartsService.removecartitems(ele);
-//  evt.target.parentElement.remove();
-this.cartitems = this._cartsService.getcartitems();
-}
 
 
 nme:String | undefined;

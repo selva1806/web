@@ -13,9 +13,37 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
+    
+    this.firebaseSerivce.getUsers().subscribe(list=>{
+      this.orderarray=list.map(item=>{
+        this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+       //  console.log(item.payload.val()[0].emailadd,user?.email)
+      // alert("1")
+          if(item.payload.val()[0].emailadd===user?.email)
+          {
 
-    this.cartitems = this._cartsService.getcartitems();
+            let mc = document.getElementById("name1") as HTMLInputElement;
+            this.name= ""+item.payload.val()[0].username;
+            mc = document.getElementById("emailid1") as HTMLInputElement;
+            this.email = ""+item.payload.val()[0].emailadd;
+            mc = document.getElementById("phone1") as HTMLInputElement;
+            this.mobile = ""+item.payload.val()[0].mobileno;
+            mc = document.getElementById("address1") as HTMLInputElement;
+            this.add = ""+item.payload.val()[0].address;
+  
+          //  this.cartitems = this._cartsService.getcartitems(String(this.email));
 
+  
+            //console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+  
+      }
+            
+          })
+      //  console.log(item.payload.val()[0].emailadd)
+        
+      
+        })
+        })
   }
 
 
@@ -30,7 +58,10 @@ export class ProductsComponent implements OnInit {
 { name:'whitish brown sheet',p:'These sheets are cut into longer dimensions and are double folded.' ,imag:'assets/img/pr7.jpg',id:'pr7',cost : '799'},
 { name:'darkblue yagu sheet',p:'The sheets has a higher density.The Dark blue sheets are more flexible.' ,imag:'assets/img/pr8.jpeg',id:'pr8',cost : '699'}
 ];
-
+name:String | undefined
+email:String | undefined
+mobile:String | undefined
+add:String | undefined
 fullopen(evt:any)
 {
   var v=evt.target.parentElement.childNodes[2].style.display="block";
@@ -41,16 +72,46 @@ fullclose(evt:any){
 cartitems:any=[];
 
   addtocart(image:any,cost:any,namee:any,quantity:any){
+    if(this.name === undefined)
+    {
+      alert("please login")
+    }
+    else
+    {
+    this.firebaseSerivce.getUsers().subscribe(list=>{
+      this.orderarray=list.map(item=>{
+        this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+         console.log(item.payload.val()[0].emailadd,user?.email)
+      // alert("1")
+          if(item.payload.val()[0].emailadd===user?.email)
+          {
 
-   var ele={imag:image,price:cost,name:namee,quantity:quantity}
+            let mc = document.getElementById("name1") as HTMLInputElement;
+            this.name= ""+item.payload.val()[0].username;
+            mc = document.getElementById("emailid1") as HTMLInputElement;
+            this.email = ""+item.payload.val()[0].emailadd;
+            mc = document.getElementById("phone1") as HTMLInputElement;
+            this.mobile = ""+item.payload.val()[0].mobileno;
+            mc = document.getElementById("address1") as HTMLInputElement;
+            this.add = ""+item.payload.val()[0].address;
+  
+  var ele={imag:image,price:cost,name:namee,quantity:quantity,uname:this.name,email:this.email}
     this._cartsService.addcartitems(ele);
+            console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+  
+      }
+            
+          })
+      //  console.log(item.payload.val()[0].emailadd)
+        
+      
+        })
+        })
+   
 //   console.log(this.cartitems)
-
+}
   }
-  name:String | undefined
-  email:String | undefined
-  mobile:String | undefined
-  add:String | undefined
+
  orderform:any;
  orderarray:any;
  randid:any;

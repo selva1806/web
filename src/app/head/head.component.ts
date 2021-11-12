@@ -13,6 +13,8 @@ export class HeadComponent implements OnInit {
 
   admin=false;
   isSignedIn=false;
+  email:String | undefined;
+
   router: any;
   constructor(private _cartsService: CartsService,public firebaseSerivce: FirebaseService) { }
     ngOnInit(){
@@ -24,8 +26,33 @@ export class HeadComponent implements OnInit {
   else{
     this.isSignedIn=false;
   }
-  
+
+  this.firebaseSerivce.getUsers().subscribe(list=>{
+    this.orderarray=list.map(item=>{
+      this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+     //  console.log(item.payload.val()[0].emailadd,user?.email)
+    // alert("1")
+        if(item.payload.val()[0].emailadd===user?.email)
+        {
+
+         
+          this.email = ""+item.payload.val()[0].emailadd;
+          
+
+
+
+          //console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+
     }
+          
+        })
+    //  console.log(item.payload.val()[0].emailadd)
+      
+    
+      })
+      })
+   
+}
     orderarray:any;
 
     viewdetails()
@@ -69,6 +96,7 @@ export class HeadComponent implements OnInit {
 opencart(){
     var v=document.getElementById("cart");
     v?.setAttribute("style","transform:translateX(0%);");
+    this._cartsService.getcartitems(String(this.email))
 }
 openorder(){
   var v=document.getElementById("order");
