@@ -33,6 +33,7 @@ import { ScrollComponent } from './scroll/scroll.component';
 import { FirebaseService } from './services/firebase.service';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { AdminComponent } from './admin/admin.component';
     ClinkComponent,
     ScrollComponent,
     ProfileComponent,
-    AdminComponent
+    AdminComponent,
+    OrdersComponent
   ],
   imports: [ 
     BrowserModule,

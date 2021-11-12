@@ -31,6 +31,7 @@
           <a class="dropdown-item" (click)="openpro()" *ngIf="isSignedIn"   >Profile</a>
 
           <a class="dropdown-item" (click)="logout()" *ngIf="isSignedIn"  routerLink="/login"  href="login">Logout</a>
+          <a class="dropdown-item"  *ngIf="isSignedIn" (click)="openorder()">Orders</a>
 
           <a class="dropdown-item"   (click)="opencart()">Cart</a>
         </div>
@@ -42,5 +43,5 @@
   </nav>
   <app-profile></app-profile>
   <app-cart></app-cart>
-
+  <app-orders></app-orders>
   

@@ -70,6 +70,10 @@ opencart(){
     var v=document.getElementById("cart");
     v?.setAttribute("style","transform:translateX(0%);");
 }
+openorder(){
+  var v=document.getElementById("order");
+  v?.setAttribute("style","transform:translateY(0%);");
+}
 logout()
   {
     this.firebaseSerivce.logout()
