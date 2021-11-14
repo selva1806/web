@@ -36,7 +36,7 @@
 <div class="cart-cont" id="cart">
     <span class="close" (click)="closecart($event)" >&times;</span>
  <span class="empty">Empty!!</span>
- <div *ngIf="cartitems.length">
+ <div *ngIf="cartitems.length > 1">
   <button class="buyall bttn1 padt" id="buy" (click)="buyall()" >
     Buy All</button>
 </div>
