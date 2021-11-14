@@ -2,6 +2,9 @@
     color: rgb(69, 69, 240);
     font-weight: bolder;
 }
+.padt{    
+    transform: translate(40px,40px);
+}
 .bttn1{
     background-color: rgb(253, 0, 219);
     color:white;

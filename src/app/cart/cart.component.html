@@ -1,5 +1,6 @@
 <div class="preview"   id="prev">
   <div class="full" *ngFor="let citem of cartitems">
+    
     <div class="prebox"  *ngIf="citem.name == nme">
       <span class="close pr" id="fcl" (click)="fullclose($event)" >&times;</span>
  
@@ -26,13 +27,19 @@
      <hr>
      <button class=" bttn1 padl " (click)="addtodb(citem.name,citem.price,citem.imag,citem.quantity)">
       Buy</button>
+      
     </div>
+    
   </div>
   
   </div>
 <div class="cart-cont" id="cart">
     <span class="close" (click)="closecart($event)" >&times;</span>
  <span class="empty">Empty!!</span>
+ <div *ngIf="cartitems.length">
+  <button class="buyall bttn1 padt" id="buy" (click)="buyall()" >
+    Buy All</button>
+</div>
 <div  *ngFor="let citem of cartitems" class="cart-card" >
 
     <span class="close in" (click)="closeitem($event)" id="clo" >&times;</span>
@@ -41,4 +48,6 @@
     Buy</button>
  <p class="ty">₹{{citem.price*citem.quantity}}</p>
 </div>
+
+
 </div>

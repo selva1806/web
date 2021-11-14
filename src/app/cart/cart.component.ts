@@ -37,7 +37,7 @@ add:String | undefined
   
             this.cartitems = this._cartsService.getcartitems(String(this.email));
 
-  
+        
             //console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
   
       }
@@ -70,6 +70,8 @@ closeitem(evt:any)
   this.cartitems = this._cartsService.removecartitems(ele,String(this.email));
 //  evt.target.parentElement.remove();
 this.cartitems = this._cartsService.getcartitems(String(this.email));
+location.reload()
+
 }
 
 
@@ -85,14 +87,17 @@ randid:any;
      alert("please login")
    }
    else{
-   this.randid=  Math.floor(Math.random() * (10000000000 - 1000000000)) + 1000000000;
-
   this.firebaseSerivce.getUsers().subscribe(list=>{
+//    alert("cc")
+
     this.orderarray=list.map(item=>{
       this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
      //   console.log(item.payload.val()[0].emailadd,user?.email)
         if(item.payload.val()[0].emailadd===user?.email)
         {
+          this.randid= 0;
+          this.randid=  Math.floor(Math.random() * (10000000000 - 1000000000)) + 1000000000;
+       
      console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
      this.orderform=[{orderid:this.randid,name:itemname,price:itemcost,image:itemurl,username:item.payload.val()[0].username,address:item.payload.val()[0].address,mobileno:item.payload.val()[0].mobileno,email:item.payload.val()[0].emailadd,quantity:quantity}];
      this._cartsService.addOrdersToFirebase(this.orderform);   
@@ -107,9 +112,48 @@ randid:any;
       })
       document.getElementById("fcl")?.click()
   document.getElementById("clo")?.click()
+  location.reload()
  }
 }
+ buyall()
+ {
+  if(this.name === undefined)
+  {
+    alert("please login")
+  }
+  else{
+this.cartitems.forEach((ele: any) => {
  
+//  this.addtodb(this.cartitems[i].name,this.cartitems[i].price,this.cartitems[i].imag,this.cartitems[i].quantity);
+this.firebaseSerivce.getUsers().subscribe(list=>{
+  this.orderarray=list.map(item=>{
+    this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
+   //   console.log(item.payload.val()[0].emailadd,user?.email)
+      if(item.payload.val()[0].emailadd===user?.email)
+      {
+   console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+   this.randid= 0;
+   this.randid=  Math.floor(Math.random() * (10000000000 - 1000000000)) + 1000000000;
+ 
+   this.orderform=[{orderid:this.randid,name:ele.name,price:ele.price,image:ele.imag,username:item.payload.val()[0].username,address:item.payload.val()[0].address,mobileno:item.payload.val()[0].mobileno,email:item.payload.val()[0].emailadd,quantity:ele.quantity}];
+   this._cartsService.addOrdersToFirebase(this.orderform);   
+
+  }
+        
+      })
+  //  console.log(item.payload.val()[0].emailadd)
+    
+  
+    })});
+  
+ var elem={imag:ele.imag,price:ele.price}
+ 
+    this._cartsService.removecartitems(elem,String(this.email));
+   });
+   this.cartitems = this._cartsService.getcartitems(String(this.email));
+   location.reload()
+}
+}
 
  show(evt:any,na:String){
   var v=evt.target;

@@ -98,8 +98,8 @@ public cartitems:any=[];
         })
     
 //   this.cartitems.splice(index,  1);
-alert("item removed")
-   location.reload()
+alert("Item removed from cart")
+
 //console.log(this.cartitems)
   }
   getOrdersFromFirebase(){
