@@ -40,12 +40,16 @@ input,input:focus{
     background-color: rgb(230, 230, 230);
    
 }
+.login-input::placeholder{
+    color: white;
+}
 .login-input{
     border:1px solid rgb(172, 172, 172);
 border-radius: 5px;
     height: 50px;
    width: 100%;
    padding-left: 10%;
+   background-color: rgba(212, 211, 211, 0.548);
    outline: none;
 }
 
@@ -129,6 +133,10 @@ transition: 1s;
         border-right: none;
         background-color: inherit;
         font-size: 15px;
+        border-radius: 0px;
+    }
+    .login-input::placeholder{
+        color: black;
     }
     
 }

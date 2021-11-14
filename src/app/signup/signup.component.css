@@ -49,11 +49,12 @@ textarea,textarea:focus,input,input:focus{
    border-top: none;
    border-left: none;
    border-right: none;
-   border-bottom-color:white ;
-   background: inherit;
+   border-bottom:4px solid white ;
+   background-color: rgba(199, 199, 199, 0.486);
+   border-radius: 5px;
 }
 .login-input::placeholder{
-    color: rgb(124, 124, 124);
+    color: rgb(255, 253, 253);
 }
 
 .mob-log{
@@ -103,6 +104,7 @@ background: linear-gradient(355deg, rgba(255,0,0,1) 6%, rgba(225,50,50,1) 33%, r
        border-right: none;
        border-bottom-color:rgb(0, 0, 0) ;
        background: inherit;
+       border-radius: 0px;
     }
     .login-input::placeholder{
         color: rgb(114, 114, 114);
@@ -142,5 +144,6 @@ transition: 1s;
     margin-left: auto;
     margin-right: auto;
     width:auto;
+    height: inherit;
 }
 
