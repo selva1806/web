@@ -31,8 +31,9 @@ export class SignupComponent implements OnInit {
         var v = document.getElementById('ur');
         v?.style.setProperty("border-bottom-color","#08ff08");
       }
-      if(email.length === 0)
+      if(email.length === 0 && (!email.includes('@') || !email.includes('.')))
       {
+        alert("Invalid email")
         var v = document.getElementById('em');
         v?.style.setProperty("border-bottom-color","red");
       }

@@ -65,7 +65,7 @@ if(user?.email ===item.payload.val()[0].email  )
 
          this.displayarray.push({orid:item.payload.val()[0].orderid,uname:item.payload.val()[0].username,image:item.payload.val()[0].image,email:item.payload.val()[0].email,address:item.payload.val()[0].address,mobile:item.payload.val()[0].mobileno,price:item.payload.val()[0].price,itemname:item.payload.val()[0].name,quantity:item.payload.val()[0].quantity})
          this.count+=1; 
-         console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+    //     console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
 
       }
         })
@@ -108,7 +108,7 @@ randid:any;
     this.firebaseSerivce.getUsers().subscribe(list=>{
       this.orderarray=list.map(item=>{
         this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
-         console.log(item.payload.val()[0].emailadd,user?.email)
+       //  console.log(item.payload.val()[0].emailadd,user?.email)
       // alert("1")
           if(item.payload.val()[0].emailadd===user?.email)
           {
@@ -124,7 +124,7 @@ randid:any;
   
   
   
-            console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+          //  console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
   
       }
             

@@ -38,8 +38,8 @@ public cartitems:any=[];
   if(a===0)
   {this.cartitems.push(item);
     localStorage.setItem('cart', JSON.stringify(this.cartitems));
-  console.log(this.cartitems)
-  console.log(localStorage.getItem('cart'))
+ // console.log(this.cartitems)
+  //console.log(localStorage.getItem('cart'))
   this.cartList.push(item);
 
   alert("Item added to cart")
@@ -56,7 +56,7 @@ public cartitems:any=[];
       this.orderarray1=list.map(item=>{
   
         this.firebaseAuth.onAuthStateChanged(user=>{
-         console.log(item.payload.val().email)
+       //  console.log(item.payload.val().email)
   if(mail ===item.payload.val().email  )
       
   { 
@@ -69,7 +69,7 @@ public cartitems:any=[];
       }
           })
       //  console.log(item.payload.val()[0].emailadd)
-        console.log(caritems)
+      //  console.log(caritems)
       
         })
         })
@@ -126,6 +126,11 @@ removeOrders(key:string)
 {
   this.orderList.remove(key)
   alert("order removed")
+}
+removeQuery(key:string)
+{
+  this.contactList.remove(key)
+  alert("Query removed")
 }
 contactAdd(contact:any)
 {

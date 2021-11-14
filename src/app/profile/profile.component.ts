@@ -36,7 +36,7 @@ profileupdation(email:string,uname:string,mobile:string,addr:string)
           // item.payload.val()[0].remove('mobileno');
          
 
-          console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+      //    console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
           alert("profile updated")
           window.location.href="/web/"
     }

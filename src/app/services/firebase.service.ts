@@ -13,11 +13,12 @@ export class FirebaseService {
   isLoggedIn=false;
   private orderlist:AngularFireList<any>;
   private userlist:AngularFireList<any>;
+  private querylist:AngularFireList<any>;
 
   constructor( private firebase: AngularFireDatabase,public firebaseAuth:AngularFireAuth,private cartsService: CartsService,private firestore: AngularFirestore) { 
     this.orderlist=this.firebase.list('orders');
     this.userlist=this.firebase.list('users');
-
+    this.querylist=this.firebase.list('contacts');
   }
 
   async signin(email:string,password:string)
@@ -51,6 +52,13 @@ getOrders() {
   this.orderlist=this.firebase.list('orders');
   return this.orderlist.snapshotChanges()
 }
+getQuery() {
+    
+   
+  this.querylist=this.firebase.list('contacts');
+  return this.querylist.snapshotChanges()
+}
+
   async signup(email:string,password:string,uname:string,mobile:string,addr:string)
   { 
     await this.firebaseAuth.createUserWithEmailAndPassword(email,password)

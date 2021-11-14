@@ -1,6 +1,23 @@
 <app-head></app-head>
 <div class="order-cont">
     <h1 class="title">Current Orders: {{count}}</h1>
+    <button class="bton" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      Queries
+    </button>
+    <div class="collapse cnt" id="collapseExample">
+    <div class="order-card clrr" *ngFor="let item of queryarray" >
+      <span class="close" (click)="closequery($event,item.qid)">&times;</span>
+        <ul class="card-det">
+            <li class="bclr">Name: <span class="bclr-in">{{item.name}}</span></li>
+            <li class="bclr">Mobile no: <span class="bclr-in">{{item.mobile}}</span></li>
+            <li class="bclr">Email:<span class="bclr-in">{{item.email}}</span> </li>
+            <li class="bclr">Address: <span class="bclr-in">{{item.subject}}</span></li>
+            <li class="bclr">Message: <span class="bclr-in">{{item.message}}</span></li>
+  
+          </ul>
+        </div>  
+        
+  </div>
   <div class="order-card" *ngFor="let item of displayarray">
     <span class="close" (click)="closeorder($event,item.orid)">&times;</span>
       <img class="card-img" src="{{item.image}}" alt="">
@@ -19,6 +36,7 @@
       
   </div>
 
+  
 </div>
 
 <app-footer></app-footer>

@@ -163,7 +163,7 @@ this.firebaseSerivce.getUsers().subscribe(list=>{
     this.firebaseSerivce.getUsers().subscribe(list=>{
       this.orderarray=list.map(item=>{
         this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
-         console.log(item.payload.val()[0].emailadd,user?.email)
+        // console.log(item.payload.val()[0].emailadd,user?.email)
       // alert("1")
           if(item.payload.val()[0].emailadd===user?.email)
           {
@@ -179,7 +179,7 @@ this.firebaseSerivce.getUsers().subscribe(list=>{
   
   
   
-            console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+           // console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
   
       }
             

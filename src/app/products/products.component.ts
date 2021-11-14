@@ -81,7 +81,7 @@ cartitems:any=[];
     this.firebaseSerivce.getUsers().subscribe(list=>{
       this.orderarray=list.map(item=>{
         this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
-         console.log(item.payload.val()[0].emailadd,user?.email)
+      //   console.log(item.payload.val()[0].emailadd,user?.email)
       // alert("1")
           if(item.payload.val()[0].emailadd===user?.email)
           {
@@ -135,7 +135,7 @@ cartitems:any=[];
         { 
           if(this.orderform!==null)
      {
-     console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+    // console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
      this.orderform=[{orderid:this.randid,name:itemname,price:itemcost,image:itemurl,username:item.payload.val()[0].username,address:item.payload.val()[0].address,mobileno:item.payload.val()[0].mobileno,email:item.payload.val()[0].emailadd,quantity:quantity}];
      this._cartsService.addOrdersToFirebase(this.orderform);  
      this.orderform=null; 
@@ -157,7 +157,7 @@ cartitems:any=[];
     this.firebaseSerivce.getUsers().subscribe(list=>{
       this.orderarray=list.map(item=>{
         this.firebaseSerivce.firebaseAuth.onAuthStateChanged(user=>{
-         console.log(item.payload.val()[0].emailadd,user?.email)
+       //  console.log(item.payload.val()[0].emailadd,user?.email)
       // alert("1")
           if(item.payload.val()[0].emailadd===user?.email)
           {
@@ -172,7 +172,7 @@ cartitems:any=[];
             this.add = ""+item.payload.val()[0].address;
   
   
-            console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
+         //   console.log(item.payload.val()[0].address,item.payload.val()[0].mobileno,item.payload.val()[0].username)
   
       }
             
